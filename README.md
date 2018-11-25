@@ -392,9 +392,13 @@ Lets create comments box.
 
 5. Find for semantic-ui.css.min
 
-6. Inside public, find index.html and add https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css;
+6. Inside folder public, find for index.html and add the css https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css;
 
 ```html
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
 ```
+
+## 24. Naive Component Approach
+
+Create comment block code.
 
