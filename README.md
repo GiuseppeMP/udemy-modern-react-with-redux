@@ -628,7 +628,7 @@ Exercise solution:
 </script>
 ```
 
-## lecture 39. Exercise - Children
+## lecture 39. Exercise - Children.
 
 Extract content duplicated into another component.
 
@@ -636,7 +636,7 @@ Extract content duplicated into another component.
 <div className="ui placeholder segment">... </div>
 ```
 
-## lecture 40. Children Exercise Solution
+## lecture 40. Children Exercise Solution.
 
 ```jsx
  const Segment = (props) => {
@@ -670,3 +670,31 @@ Extract content duplicated into another component.
         );
     } 
 ```
+
+# 25/nov/18 - Structuring Apps with Class-Based Components
+
+## lecture 41. Class-Based Components.
+
+> The lecture 10 says: React component is a function or a class, that produces HTML to show the user.
+
+Until now we are just using function components, on this lecture we going to start with class based components.
+
+### Function Components
+
+> Good for simple content.
+
+### Class Components
+
+> Good for just about everything else.
+  
+|:- Functional Components -|:- Class Components -|
+Good for simple content., Good for just about everything else.
+
+
+### Class Components Benefits
+
+1. Easier code organization.
+2. Can use 'state' (another react feature).
+    1. Easier to handle user input.
+3. Understands lifecycle events.
+    1. Easir to do things when the app first starts.
