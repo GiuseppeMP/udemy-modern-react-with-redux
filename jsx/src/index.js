@@ -3,20 +3,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-function getBtnText(){
-    return "Click on Me!";
-}
-
 // Create react component
 const App = () => {
 
-    const buttonText = 'Click Me!';
+    const button = {text:'Click me'};
+    const labbelText = "Enter Name";
 
     return (
     <div>
-        <label for="name" className="label">Enter name</label>
+        <label for="name" className="label">{labbelText}</label>
         <input id="name" type="text"></input>
-        <button style={{backgroundColor:'blue', color:'white'}}>{getBtnText()}</button>
+        <button style={{backgroundColor:'blue', color:'white'}}>{button.text}</button>
     </div>
   );
 };
@@ -25,3 +22,5 @@ const App = () => {
 ReactDOM.render(
     <App/>, document.querySelector('#root')
 );
+
+

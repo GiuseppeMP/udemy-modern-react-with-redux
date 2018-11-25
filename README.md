@@ -290,3 +290,24 @@ function getBtnText(){
 
 ``` 
 
+## 17. Values JSX Can't Show
+
+
+Some values cant be used on JSX. We can use a lot of types on variable, like:
+
+1. Array of Numbers : const buttonText = [10,20];
+2. Array of Strings : const buttonText = ['Hi','There'];
+3. String : const buttonText = 'Hi there';
+4. Numbers : const buttonText = 123;
+
+All examples above works, but exists a particularity that doesn't works, the use of an object:
+
+```jsx
+const buttonText = {text:'Click me'};
+
+Error:
+<button style={{backgroundColor:'blue', color:'white'}}>{buttonText}</button>
+
+Works:
+<button style={{backgroundColor:'blue', color:'white'}}>{buttonText.text}</button>
+```
