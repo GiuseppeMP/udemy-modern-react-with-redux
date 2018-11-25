@@ -14,7 +14,7 @@
 
 # 25/nov/18 - Lets Dive in!
 
-## 1,2,3,4. - What is React
+## lectures 1,2,3,4. - What is React
 
 1. Library focused on user interaction.
 2. React is a library and React-DOM is another.
@@ -22,7 +22,7 @@
 4. Uses npm, for example:  "npm install -g create-react-app".
 
 
-## 5, 6. Generating a react project
+## lectures 5, 6. Generating a react project
 
 > npm (Runs npm) , install (Command to NPM), -g (Install this package globally, so we can run from anywhere, terminal etc), create-react-app (name of the package we want).
 
@@ -30,7 +30,7 @@
 
 > Babel, (Javascript updates does not follow browsers supports), babel takes any javascript and convert to javascript ES5, like ES2018 -> ES5. Babel have a huge number of packages, this is the reason of many dependencies in a generated project.
 
-## 7. Exploring a create-react-app project
+## lecture 7. Exploring a create-react-app project
 
 > src : Folder where we put all the source code we write.
 
@@ -45,14 +45,14 @@
 > README.md : Instructions on how to use this project.
 
 
-## 8. Starting and Stopping a React App
+## lecture 8. Starting and Stopping a React App
 
 > stopping the react app -> CTRL+C on terminal that is running the react app.
 
 > starting the react app -> runs npm start on our project directory.
 
 
-## 9. Javascript Module Systems
+## lecture 9. Javascript Module Systems
 
 1. Erase all files in src.
 2. Create a index.js file.
@@ -74,7 +74,7 @@ import ReactDOM from 'react-dom';
 3. 'from' -> We are about to specify the name of the library or file we are importing from.
 4. 'react'-> The name of the dependency or path of the file we want, we are importing.
 
-## 10. Displaying content with functional components.
+## lecture 10. Displaying content with functional components.
 
 React component is a function or a class, that produces HTML to show the user .
 
@@ -99,7 +99,7 @@ ReactDOM.render(
 
 # 25/nov/18 - Building Content with JSX!
 
-## 11. What is JSX.
+## lecture 11. What is JSX.
 
 First of all, the browser does not understand what .jsx is, so babel comes in, it is a javascript compiler. Its convert any jsx or js newers versions to ES5.
 
@@ -193,7 +193,7 @@ var App = function App() {
 };
 ```
 
-## 12. Converting HTML to JSX.
+## lecture 12. Converting HTML to JSX.
 
 1. HTML != JSX.
 2. JSX isn't HTML.
@@ -223,7 +223,7 @@ var App = function App() {
 5. An error is expected, because HTML isn't JSX.
 
 
-## 13. Inline Styling with JSX.
+## lecture 13. Inline Styling with JSX.
 
 ### HTML vs JSX
 
@@ -243,7 +243,7 @@ JSX:
 We need to convert properties name from baby-case to camelCase like:  first-name -> firstName, background-color -> backgroundColor and so on.
 
 
-## 14. Converting Styling to JSX Format
+## lecture 14. Converting Styling to JSX Format
 
 Steps.
 
@@ -254,7 +254,7 @@ Steps.
 5. Ex: before: style="background-color:blue; color:white" after: style={{backgroundColor:'blue', color:'white'}} .
 
 
-## 15. class vs className
+## lecture 15. class vs className
 
 Adding a class to an element uses different syntax.
 
@@ -272,7 +272,7 @@ The reason os this is because the keyword class is a reserved keyword in js, so,
 
 > Today have a discution in communitty about create the support of 'class' inside JSX.
 
-## 16. Referencing JS Variables in JSX.
+## lecture 16. Referencing JS Variables in JSX.
 
 We can reffer js variables or functions in JSX using {} (brackets).
 
@@ -291,7 +291,7 @@ function getBtnText(){
 
 ``` 
 
-## 17. Values JSX Can't Show.
+## lecture 17. Values JSX Can't Show.
 
 
 Some values cant be used on JSX. We can use a lot of types on variable, like:
@@ -313,7 +313,7 @@ Works:
 <button style={{backgroundColor:'blue', color:'white'}}>{buttonText.text}</button>
 ```
 
-## 18. Finding Forbidden Property Names.
+## lecture 18. Finding Forbidden Property Names.
 
 Exists properties that are forbidden, we must keep our browser console open to see warning messages of this kind of errors, for example:
 
@@ -333,7 +333,7 @@ So, 'for', it is a forbidden HTML property we must fix:
     <label htmlFor="name" className="label">{labbelText}</label>
 ```
 
-## 19, 20. Exercise Introduction, Coding Exercise 1: JSX Interpolation.
+## lectures 19, 20. Exercise Introduction, Coding Exercise 1: JSX Interpolation.
 
 Solution:
 
@@ -362,7 +362,7 @@ Solution:
 # 25/nov/18 - Communicating with Props!
 
 
-## 21. Three Tenets of Components.
+## lecture 21. Three Tenets of Components.
 
 In react there are three tenets we must know, we create a component at time, but a typical react app is a set of component inside each other.
 
@@ -372,13 +372,13 @@ In react there are three tenets we must know, we create a component at time, but
 
 > Component Configuration - We should be able to configure a component when it is created.
 
-## 22. Application Overview.
+## lecture 22. Application Overview.
 
 Lets generated another project by sides 'jsx' project. lets use create-react-app components.
 
 We going to build a comments component.
 
-## 23. Getting Some Free Styling.
+## lecture 23. Getting Some Free Styling.
 
 Lets create comments box.
 
@@ -398,12 +398,12 @@ Lets create comments box.
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
 ```
 
-## 24. Naive Component Approach.
+## lecture 24. Naive Component Approach.
 
 Create comment html block code.
 
 
-## 25. Specifying images in JSX.
+## lecture 25. Specifying images in JSX.
 
 Lets use faker js, open library that helps you to generate a lot of fake data.
 
@@ -429,3 +429,11 @@ Lets install it:
 ```jsx
 <img alt="avatar" src={Faker.image.avatar()}/>
 ```
+
+## lecture 26. Duplicating a Single Component.
+
+We need to duplicate all JSX to each comment, this is painful, the file becomes larges and we dont know what hack we are looking at.
+
+Next lecture we going to refactor this.
+
+
