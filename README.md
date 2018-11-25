@@ -686,10 +686,6 @@ Until now we are just using function components, on this lecture we going to sta
 ### Class Components
 
 > Good for just about everything else.
-  
-|:- Functional Components -|:- Class Components -|
-Good for simple content., Good for just about everything else.
-
 
 ### Class Components Benefits
 
@@ -698,3 +694,29 @@ Good for simple content., Good for just about everything else.
     1. Easier to handle user input.
 3. Understands lifecycle events.
     1. Easir to do things when the app first starts.
+
+
+## lecture 42. Application Overview.
+
+Lets build seasons application, that detected user location and timezone afterwards changes your style.
+
+1. Burr, its chilly, if the user attempts:
+
+* in the northen hemisphere.
+    * and between October and March
+* in the southern hemisphere.
+    * and between March and October
+
+2. Let's hit the beach, if the user attempts:
+
+* in the northen hemisphere.
+    * and between March and October
+* in the southern hemisphere.
+    * and between October and March
+
+### App Challenges
+
+1. Get user physical location.
+2. Determine the current month.
+3. Change text and styling based on location + month.
+
