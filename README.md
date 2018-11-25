@@ -558,4 +558,14 @@ Coded solution.
 
 Lets add two buttons to our comment component for the features: (Approve) (Reject).
 
-Lets create another component called ApprovalCard to keep those buttons. This new component show a text and offer to options, approve or reject.
+Lets create another component called ApprovalCard to keep those buttons. This new component show a text and offer two options: approve or reject.
+
+## lecture 34. Implementing an Approval Card.
+
+1. Create ApprovalCard.js file.
+2. Create a react component with card html from semantic-ui.com
+3. Add export to ApprovalCard component.
+4. Add import of ApprovalCard in index.js.
+5. Use ApprovalCard component bysides CommentDetail component.
+
+
