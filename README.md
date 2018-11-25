@@ -549,3 +549,7 @@ Let's pass the other props, timeAgo and text.
         </div>
     );
 ```
+
+## lecture 32. Passing Props - Solutions
+
+Coded solution.
