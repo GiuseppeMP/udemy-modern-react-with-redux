@@ -56,3 +56,20 @@
 
 1. Erase all files in src.
 2. Create a index.js file.
+3. Add the follow snippet on the index.js, this sintax means:  
+
+Look inside node_modules a folder called react and import it with React alias.
+Look inside node_modules a folder called react-dom and import it with ReactDOM alias.
+
+```json
+import React from 'react';
+import ReactDOM from 'react-dom';
+```
+
+> import 'alias' from 'library/foldername' > CommonJS Modules
+> require('library/foldername') > ES2015 Modules
+
+1. import -> We want to get code from some other file or dependency.
+2. 'React' -> The variable we want to assign this import to.
+3. 'from' -> We are about to specify the name of the library or file we are importing from.
+4. 'react'-> The name of the dependency or path of the file we want, we are importing.
