@@ -378,6 +378,23 @@ Lets generated another project by sides 'jsx' project. lets use create-react-app
 
 We going to build a comments component.
 
+## 23. Getting Some Free Styling.
 
+Lets create comments box.
 
+1. Erase all files in src folder to make from scratch.
+
+2. We dont want to lose much time with css, so, go to semantic-ui.com to get some default styles.
+
+3. Search for comments.
+
+4. Lets install semantic ui using cdn to be much easier for us. https://cdnjs.com/libraries/semantic-ui
+
+5. Find for semantic-ui.css.min
+
+6. Inside public, find index.html and add https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css;
+
+```html
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+```
 
