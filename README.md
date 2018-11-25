@@ -588,6 +588,10 @@ When we passing a entire component inside another, its add to props always as ch
 <div className="content">{props.children}</div>
 ```
 
+## lecture 36. Component Reuse
 
+This funky way allow us to reuse the approvalCard just wrapping anything, html or plainText for approves.
+
+Just make sure we are using props.children somewhere in the parent.
 
 
