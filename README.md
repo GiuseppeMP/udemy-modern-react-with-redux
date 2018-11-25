@@ -553,3 +553,9 @@ Let's pass the other props, timeAgo and text.
 ## lecture 32. Passing Props - Solutions
 
 Coded solution.
+
+## lecture 33. Component Reuse
+
+Lets add two buttons to our comment component for the features: (Approve) (Reject).
+
+Lets create another component called ApprovalCard to keep those buttons. This new component show a text and offer to options, approve or reject.
