@@ -250,4 +250,24 @@ Steps.
 2. Look for properties with babe-case and convert to camelCase.
 3. Change separator ; properties for , .
 4. Make sure the values of properties are wrapped by simple quote, '' or double quotes " " .
-5. Ex: before: style="background-color:blue; color:white" after: style={{backgroundColor:'blue', color:'white'}}
+5. Ex: before: style="background-color:blue; color:white" after: style={{backgroundColor:'blue', color:'white'}} .
+
+
+## 15. class vs className
+
+Adding a class to an element uses different syntax.
+
+```html
+<label for="name" class="label">Enter name</label>
+```
+
+This is snippet needs to change to:
+
+```html
+<label for="name" className="label">Enter name</label>
+```
+
+The reason os this is because the keyword class is a reserved keyword in js, so, this is just to avoid conflicts between css keywords vs js keywords.
+
+> Today have a discution in communitty about create the support of 'class' inside JSX.
+
