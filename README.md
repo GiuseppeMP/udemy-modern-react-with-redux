@@ -271,3 +271,22 @@ The reason os this is because the keyword class is a reserved keyword in js, so,
 
 > Today have a discution in communitty about create the support of 'class' inside JSX.
 
+## 16. Referencing JS Variables in JSX.
+
+We can reffer js variables or functions in JSX using {} (brackets).
+
+```jsx
+const buttonText = 'Click Me!';
+
+function getBtnText(){
+    return "Click on Me!";
+}
+
+
+<button style={{backgroundColor:'blue', color:'white'}}>{buttonText}</button>
+
+<button style={{backgroundColor:'blue', color:'white'}}>{getBtnText()}</button>
+
+
+``` 
+
