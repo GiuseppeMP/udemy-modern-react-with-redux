@@ -240,3 +240,14 @@ JSX:
 ```
 
 We need to convert properties name from baby-case to camelCase like:  first-name -> firstName, background-color -> backgroundColor and so on.
+
+
+## 14. Converting Styling to JSX Format
+
+Steps.
+
+1. Change " " to {{ }}.
+2. Look for properties with babe-case and convert to camelCase.
+3. Change separator ; properties for , .
+4. Make sure the values of properties are wrapped by simple quote, '' or double quotes " " .
+5. Ex: before: style="background-color:blue; color:white" after: style={{backgroundColor:'blue', color:'white'}}
