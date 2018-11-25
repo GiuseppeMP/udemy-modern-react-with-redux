@@ -467,3 +467,17 @@ Creating a Reusable & Configurable Component.
     <CommentDetail/>
 </div>
 ```
+
+## lecture 29. React's Props System
+
+Its always a good practice make Component Hierarchy Diagram.
+
+> Props in react is: A System for passing data from a parent component to a child component.
+>> Goal is to customize or configure a child component.
+
+Example:
+App -> prop: Name='Alex' -> CommentDetail
+App -> prop: Name='Sam' -> CommentDetail
+App -> prop: Name='Peter' -> CommentDetail
+
+
