@@ -515,3 +515,37 @@ const CommentDetail = (props) => {
     </a>
 }
 ```
+
+## lecture 31. Passing Multiples Props
+
+We see before how to pass props. Its just need to write the property name equals property value ex(author="Peter").
+
+Let's pass the other props, timeAgo and text.
+
+```jsx
+<CommentDetail author="Alex" timeAgo="Today at 4:45PM" text="Nice blog post!" avatar={Faker.image.avatar()} />
+
+  return (
+        <div className="comment">
+
+        <a href="/" className="avatar">
+            <img alt="avatar" src={props.avatar}/>
+        </a>
+
+        <div className="content">
+            <a href="/" className="author">
+                {props.author}
+            </a>
+            <div className="metadata">
+                <span className="date">
+                    {props.timeAgo}
+                </span>
+            </div>
+            <div className="text">
+                {props.text}
+            </div>
+        </div>
+
+        </div>
+    );
+```
