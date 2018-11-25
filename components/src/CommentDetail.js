@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Faker from 'faker';
 
 const CommentDetail = () => {
@@ -31,8 +30,4 @@ const CommentDetail = () => {
 
 };
 
-
-
-ReactDOM.render(
-    <CommentDetail/>, document.querySelector("#root")
-);
+export default CommentDetail;

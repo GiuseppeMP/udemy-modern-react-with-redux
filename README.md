@@ -448,4 +448,22 @@ Creating a Reusable & Configurable Component.
 6. We need to change the hardcoded information to props.
 
 
+## lecture 28. Component Nesting.
 
+1. Our components does not have any bound. index.js -> App COmponent CommentDetail.js -> Comment Detail Component.
+
+2. To make CommentDetail component available for others components, we should add the line 'export default CommentDetail' on CommentDetail.js
+
+3. Some others components that want to use, need to put the line 'import CommentDetail from './CommentDetail'';
+
+4. So, lets add to index.js the import CommentDetail.
+
+5. The library that takes the responsabilities from import/exports is called webpack.
+
+6. Inside the App JSX we use the name of the referenced component as HTML. 
+
+```jsx
+<div className="ui container comments">
+    <CommentDetail/>
+</div>
+```
