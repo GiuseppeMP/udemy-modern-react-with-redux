@@ -398,7 +398,34 @@ Lets create comments box.
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
 ```
 
-## 24. Naive Component Approach
+## 24. Naive Component Approach.
 
-Create comment block code.
+Create comment html block code.
 
+
+## 25. Specifying images in JSX.
+
+Lets use faker js, open library that helps you to generate a lot of fake data.
+
+>https://github.com/marak/Faker.js/
+
+We can fake a lot of things, almost everything. Lets use to fake avatars to our comments component.
+
+Lets install it:
+
+1. Stop running project.
+2. Run npm install --save faker.
+
+> --save flag means we are saving this dependency in our local project.
+
+3. import Faker on index.js
+
+```jsx
+    import Faker from 'faker';
+```
+
+4. Usage may based on documentation where image.avatar generateds a fake avatar for us.               
+
+```jsx
+<img alt="avatar" src={Faker.image.avatar()}/>
+```
