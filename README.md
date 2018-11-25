@@ -436,4 +436,16 @@ We need to duplicate all JSX to each comment, this is painful, the file becomes 
 
 Next lecture we going to refactor this.
 
+## lecture 27. Extracting JSX to New Components.
+
+Creating a Reusable & Configurable Component.
+
+1. Identify the JSX that appears to be duplicated.
+2. What is the purpose of that block of JSX? Think of a descriptive name for what i does.
+3. Create a new file to house this new component - it should have the same name as the component.
+4. Create a new component in the new file, paste the JSX into it.
+5. Make the new component configurable by using React's 'props' system.
+6. We need to change the hardcoded information to props.
+
+
 
