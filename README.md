@@ -290,7 +290,7 @@ function getBtnText(){
 
 ``` 
 
-## 17. Values JSX Can't Show
+## 17. Values JSX Can't Show.
 
 
 Some values cant be used on JSX. We can use a lot of types on variable, like:
@@ -310,4 +310,24 @@ Error:
 
 Works:
 <button style={{backgroundColor:'blue', color:'white'}}>{buttonText.text}</button>
+```
+
+## 18. Finding Forbidden Property Names.
+
+Exists properties that are forbidden, we must keep our browser console open to see warning messages of this kind of errors, for example:
+
+```javascript
+Warning: Invalid DOM property `for`. Did you mean `htmlFor`?
+    in label (at src/index.js:14)
+    in div (at src/index.js:13)
+    in App (at src/index.js:23)
+```
+
+So, 'for', it is a forbidden HTML property we must fix:
+
+```jsx
+    error:
+    <label for="name" className="label">{labbelText}</label>
+    works:
+    <label htmlFor="name" className="label">{labbelText}</label>
 ```
