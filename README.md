@@ -97,6 +97,7 @@ ReactDOM.render(
 
 3. '<App/>' is the name of the react component, and #root is the div present in public/index.html that we want to put the component.
 
+# 25/nov/18 - Building Content with JSX!
 
 ## 11. What is JSX.
 
@@ -357,3 +358,16 @@ Solution:
 </script>
 
 ```
+
+# 25/nov/18 - Communicating with Props!
+
+
+## 21. Three Tenets of Components.
+
+In react there are three tenets we must know, we create a component at time, but a typical react app is a set of component inside each other.
+
+> Component Nesting - A component can be shown inside of another.
+
+> Component Resuability - We want to make components that can be easily reused through out application.
+
+> Component Configuration - We should be able to configure a component when it is created.
