@@ -569,3 +569,25 @@ Lets create another component called ApprovalCard to keep those buttons. This ne
 5. Use ApprovalCard component bysides CommentDetail component.
 
 
+## lecture 35. Showing custom children.
+
+We need to show the approvalCard inside CommentDetail, but we need to keeps the reusability of the components.
+
+When we passing a entire component inside another, its add to props always as children, its a little funky.
+
+```jsx
+ <ApprovalCard>
+    <CommentDetail
+        author="Alex"
+        timeAgo="Today at 4:45PM"
+        content="Nice blog post!"
+        avatar={Faker.image.avatar()}
+    />
+</ApprovalCard>
+
+<div className="content">{props.children}</div>
+```
+
+
+
+
