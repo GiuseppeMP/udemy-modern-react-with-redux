@@ -371,3 +371,13 @@ In react there are three tenets we must know, we create a component at time, but
 > Component Resuability - We want to make components that can be easily reused through out application.
 
 > Component Configuration - We should be able to configure a component when it is created.
+
+## 22. Application Overview.
+
+Lets generated another project by sides 'jsx' project. lets use create-react-app components.
+
+We going to build a comments component.
+
+
+
+
