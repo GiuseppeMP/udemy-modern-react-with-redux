@@ -588,10 +588,42 @@ When we passing a entire component inside another, its add to props always as ch
 <div className="content">{props.children}</div>
 ```
 
-## lecture 36. Component Reuse
+## lecture 36. Component Reuse.
 
 This funky way allow us to reuse the approvalCard just wrapping anything, html or plainText for approves.
 
 Just make sure we are using props.children somewhere in the parent.
 
 
+## lecture 37. Exercise - Props and reusable.
+
+Just pass props as attrs.
+
+## lecture 38. Coding Exercise 2: Test Your Knowledge: Props.
+
+Exercise solution:
+
+```jsx
+<script type="text/babel" data-presets="env,react">
+    const App = () => {
+        return (
+            <div>
+                <Message message="Reusable component" details="Details of the message"/>
+            </div>
+        );
+    }
+    
+    const Message = (props) => {
+        return (
+            <div className="ui message">
+                <div className="header">{props.message}</div>
+                <p>{props.details}</p>
+            </div>
+        );
+    }
+    
+
+    // Renders the App component into a div with id 'root'
+    ReactDOM.render(<App />, document.querySelector('#root'));
+</script>
+```
