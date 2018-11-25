@@ -476,8 +476,42 @@ Its always a good practice make Component Hierarchy Diagram.
 >> Goal is to customize or configure a child component.
 
 Example:
-App -> prop: Name='Alex' -> CommentDetail
-App -> prop: Name='Sam' -> CommentDetail
-App -> prop: Name='Peter' -> CommentDetail
+
+>>App -> prop: Name='Alex' -> CommentDetail
+
+>>App -> prop: Name='Sam' -> CommentDetail
+
+>>App -> prop: Name='Peter' -> CommentDetail
 
 
+## lecture 30. Passing and Receiving Props
+
+The props system have two phases, first we need to provide information, the second we need to receive this information on child and handle with it.
+
+### Providing
+Its simple, just use HTML sintax:
+
+```jsx
+<CommentDetail author="Alex" />
+<CommentDetail author="Sam" />
+<CommentDetail author="Peter" />
+```
+or variables interpolation
+
+```jsx
+<CommentDetail author="{author}" />
+```
+
+### Receiving
+
+In the arrow function of the component use an argument called props.
+
+```jsx
+const CommentDetail = (props) => {
+    console.log(props);
+
+    <a href="/" className="author">
+        {props.author}
+    </a>
+}
+```
