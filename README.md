@@ -703,20 +703,34 @@ Lets build seasons application, that detected user location and timezone afterwa
 1. Burr, its chilly, if the user attempts:
 
 * in the northen hemisphere.
-    * and between October and March
+    * and between October and March.
 * in the southern hemisphere.
-    * and between March and October
+    * and between March and October.
 
 2. Let's hit the beach, if the user attempts:
 
 * in the northen hemisphere.
-    * and between March and October
+    * and between March and October.
 * in the southern hemisphere.
-    * and between October and March
+    * and between October and March.
 
-### App Challenges
+### App Challenges.
 
 1. Get user physical location.
 2. Determine the current month.
 3. Change text and styling based on location + month.
+
+
+## lecture 43. Scaffolding the App.
+
+1. Go to semantic-ui.com, add css to the index.html.
+2. Erase all files in src folder.
+3. Create index.js in src folder.
+4. Import React and ReactDOM.
+5. Write the App component returning div.
+6. Create SeasonDisplay.js file.
+7. Write the SeasonDisplay returning a simple div with 'Season' text.
+8. Use export default SeasonDisplay.
+9. In index.js import SeasonDisplay.
+10. Use SeasonDisplay in App component.
 
