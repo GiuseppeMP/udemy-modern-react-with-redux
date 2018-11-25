@@ -95,10 +95,10 @@ ReactDOM.render(
 );
 ```
 
-3. <App/> is the name of the react component, and #root is the div present in public/index.html that we want to put the component.
+3. '<App/>' is the name of the react component, and #root is the div present in public/index.html that we want to put the component.
 
 
-## 11. What is JSX
+## 11. What is JSX.
 
 First of all, the browser does not understand what .jsx is, so babel comes in, it is a javascript compiler. Its convert any jsx or js newers versions to ES5.
 
@@ -191,3 +191,35 @@ var App = function App() {
   );
 };
 ```
+
+## 11. Converting HTML to JSX.
+
+1. HTML != JSX.
+2. JSX isn't HTML.
+3. We can conver HTML to JSX.
+
+
+### Steps
+
+> Use codepen.io to write some HTML.
+
+> Create BTN -> new PEN.
+
+> Write some html like https://codepen.io/giuseppemp/pen/zMaoXZ.
+
+```html
+<div>
+ 
+  <label for="name" class="label">Enter name</label>
+  <input id="name" type="text"/>
+  <button style="background-color:blue; color:white">Save</button>
+  
+</div>
+```
+
+4. change return of App component for that html snippet.
+
+5. An error is expected, because HTML isn't JSX.
+
+
+
