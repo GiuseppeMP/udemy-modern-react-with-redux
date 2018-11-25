@@ -192,7 +192,7 @@ var App = function App() {
 };
 ```
 
-## 11. Converting HTML to JSX.
+## 12. Converting HTML to JSX.
 
 1. HTML != JSX.
 2. JSX isn't HTML.
@@ -222,4 +222,21 @@ var App = function App() {
 5. An error is expected, because HTML isn't JSX.
 
 
+## 13. Inline Styling with JSX.
 
+### HTML vs JSX
+
+Adding custom style to component have different syntax.
+
+HTML:
+
+```html
+  <button style="background-color:blue; color:white">Save</button>
+```
+JSX:
+
+```jsx
+    <button style={{backgroundColor:'blue', color:'white'}}>Save</button>
+```
+
+We need to convert properties name from baby-case to camelCase like:  first-name -> firstName, background-color -> backgroundColor and so on.

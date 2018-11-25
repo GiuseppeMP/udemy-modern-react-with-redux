@@ -8,7 +8,7 @@ const App = () => {
     <div>
         <label for="name" class="label">Enter name</label>
         <input id="name" type="text"></input>
-        <button style="background-color:blue; color:white">Save</button>
+        <button style={{backgroundColor:'blue', color:'white'}}>Save</button>
     </div>
   );
 };
