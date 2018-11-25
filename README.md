@@ -16,33 +16,33 @@
 
 ## 1,2,3,4. - What is React
 
-1. Library focused on user interaction
+1. Library focused on user interaction.
 2. React is a library and React-DOM is another.
-3. Based on components
-4. Uses npm, for example:  "npm install -g create-react-app"
+3. Based on components.
+4. Uses npm, for example:  "npm install -g create-react-app".
 
 
 ## 5, 6. Generating a react project
 
-> npm (Runs npm) , install (Command to NPM), -g (Install this package globally, so we can run from anywhere, terminal etc), create-react-app (name of the package we want)
+> npm (Runs npm) , install (Command to NPM), -g (Install this package globally, so we can run from anywhere, terminal etc), create-react-app (name of the package we want).
 
-> create project with "create-react-app project-name" or "npx create-react-app project-name"
+> create project with "create-react-app project-name" or "npx create-react-app project-name".
 
 > Babel, (Javascript updates does not follow browsers supports), babel takes any javascript and convert to javascript ES5, like ES2018 -> ES5. Babel have a huge number of packages, this is the reason of many dependencies in a generated project.
 
 ## 7. Exploring a create-react-app project
 
-> src : Folder where we put all the source code we write
+> src : Folder where we put all the source code we write.
 
-> public :  Folder that stores static files, like images
+> public :  Folder that stores static files, like images.
 
-> node_modules : Folder that contains all of our project dependencies
+> node_modules : Folder that contains all of our project dependencies.
 
-> package.json : Records our project dependencies and configures our project
+> package.json : Records our project dependencies and configures our project.
 
-> package-lock.json :  Records the exact version of packages that we install
+> package-lock.json :  Records the exact version of packages that we install.
 
-> README.md : Instructions on how to use this project
+> README.md : Instructions on how to use this project.
 
 
 ## 8. Starting and Stopping a React App
@@ -53,3 +53,6 @@
 
 
 ## 9. Javascript Module Systems
+
+1. Erase all files in src.
+2. Create a index.js file.
