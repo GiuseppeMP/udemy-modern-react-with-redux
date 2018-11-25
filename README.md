@@ -61,7 +61,7 @@
 Look inside node_modules a folder called react and import it with React alias.
 Look inside node_modules a folder called react-dom and import it with ReactDOM alias.
 
-```json
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
 ```
@@ -73,3 +73,26 @@ import ReactDOM from 'react-dom';
 2. 'React' -> The variable we want to assign this import to.
 3. 'from' -> We are about to specify the name of the library or file we are importing from.
 4. 'react'-> The name of the dependency or path of the file we want, we are importing.
+
+## 10. Displaying content with functional components
+
+React component is a function or a class, that produces HTML to show the user .
+
+
+1. Lets create a component called App what returns a div with the txt 'hi there':
+
+```javascript
+const App = () => {
+    return <div>Hi there!</div>;
+};
+```
+
+2. Lets show this component on the screen, using ReactDOM.
+
+```javascript
+ReactDOM.render(
+    <App/>, document.querySelector('#root')
+);
+```
+
+3. <App/> is the name of the react component, and #root is the div present in public/index.html that we want to put the component.
