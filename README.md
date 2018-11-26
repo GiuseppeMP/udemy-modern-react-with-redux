@@ -734,3 +734,14 @@ Lets build seasons application, that detected user location and timezone afterwa
 9. In index.js import SeasonDisplay.
 10. Use SeasonDisplay in App component.
 
+
+
+## lecture 44. Getting a Users Physical Location.
+
+We can use mozilla api:
+
+>https://developer.mozilla.org/pt-BR/docs/Web/API/Geolocation/getCurrentPosition
+
+1. In app component use the mozilla api.
+
+> window.navigator.geolocation.getCurrentPosition();
