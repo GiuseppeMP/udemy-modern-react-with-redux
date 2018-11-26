@@ -3,17 +3,13 @@ import ReactDOM from "react-dom";
 //import SeasonDisplay from "./SeasonDisplay";
 
 class App extends React.Component {
-	constructor(props) {
-		super(props);
-
-		// The constructor only job is initialite the state.
-		this.state = {
-			reactName: "react-component-app",
-			lat: null,
-			long: null,
-			errorMessage: ""
-		};
-	}
+	// equivalent to constructor function thank the babeljs
+	state = {
+		reactName: "react-component-app",
+		lat: null,
+		long: null,
+		errorMessage: ""
+	};
 
 	componentDidMount() {
 		console.log("My season component just rendered.");

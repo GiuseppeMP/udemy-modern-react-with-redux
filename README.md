@@ -933,4 +933,21 @@ Lets refactor our geolocation method to lifecycles.
     }
 ```
 
+## lecture 58. Alternate State Initialization.
+
+Lets use a different way to init state.
+
+Go to babeljs.io and use this snippet:
+
+```jsx
+class App extends React.Component {
+	// equivalent to constructor function thank the babeljs
+	state = {
+		reactName: "react-component-app",
+		lat: null,
+		long: null,
+		errorMessage: ""
+	};
+```
+We can see that thank the babeljs we can use this way to create our construtor.
 
