@@ -1,31 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import SeasonDisplay from './SeasonDisplay';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import SeasonDisplay from "./SeasonDisplay";
 
 class App extends React.Component {
+	constructor(props) {
+		super(props);
 
-    render(){
+		// init state
+		this.state = { lat: null };
+	}
 
-        window.navigator.geolocation.getCurrentPosition(
+	// React says we have to define render method!!
+	render() {
+		window.navigator.geolocation.getCurrentPosition(
+			(position) => console.log(position),
+			(error) => console.log(error)
+		);
 
-            (position) => console.log(position),
-            (error) => console.log(error)
-    
-        );
-
-        return (
-            <div>        
-                <div>Latitude:</div>  
-                <div>Longitude:</div>  
-                <SeasonDisplay/>
-            </div>
-
-        );
-    }
-
+		return (
+			<div>
+				<div>Latitude:</div>
+				<div>Longitude:</div>
+				<SeasonDisplay />
+			</div>
+		);
+	}
 }
 
-ReactDOM.render(
-    <App/>, document.querySelector("#root")
-);
+ReactDOM.render(<App />, document.querySelector("#root"));

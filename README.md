@@ -814,3 +814,12 @@ class App extends React.Component {
 6. **State can only be updated using the function 'setState'.**
 
 > Technically can be used with funcional components using the 'hooks' system.
+
+
+## lecture 50. Initializing State Through Constructors.
+
+> React says we have to define render method!!
+
+> We need to specificy constructor function in class component.
+>> In the constructor is a good place to initialize the state.
+
