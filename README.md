@@ -970,3 +970,11 @@ getSeason(lat, month) {
 		}
 	}
 ```
+
+## lecture 61. Ternary Expressions in JSX.
+
+If is winter we need to display 'Chuur'!
+
+If is summer we need to display 'Lets hit the beach!';
+
+
