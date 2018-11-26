@@ -759,3 +759,39 @@ We cant keep state on functional component because its runs once and not keeps s
 
 > Answer: Refactoring to Class Component. Functional Component does not supports async handle.
 
+## lecture 47. Refactoring from Functional to Class Components.
+
+To refactor a functional comp to class comp, we need to attemp some requirements.
+
+### Rules of Class Components.
+
+1. Must be a Javascript Class.
+2. Must extend subclass React.Component.
+3. Must define a 'render' method that returns some amount of JSX.
+
+for example: 
+
+```jsx
+class App extends React.Component {
+
+    render(){
+
+        window.navigator.geolocation.getCurrentPosition(
+
+            (position) => console.log(position),
+            (error) => console.log(error)
+    
+        );
+
+        return (
+            <div>        
+                <div>Latitude:</div>  
+                <div>Longitude:</div>  
+                <SeasonDisplay/>
+            </div>
+
+        );
+    }
+
+}
+```
