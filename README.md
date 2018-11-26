@@ -956,3 +956,17 @@ We can see that thank the babeljs we can use this way to create our construtor.
 How to send state values as props to another components.
 
 
+## lecture 60. Determining Season.
+
+Lets discover what season user are, by the latitude and month.
+
+```jsx
+getSeason(lat, month) {
+		console.log(lat + " " + month);
+		if (month > 2 && month < 9) {
+			return lat > 0 ? "summer" : "winter";
+		} else {
+			return lat > 0 ? "winter" : "summer";
+		}
+	}
+```
