@@ -908,3 +908,29 @@ Component Lifecycle over time:
 3. getSnapshotBeforeUpdate.
 
 
+## lecture 57. Refactoring Data Loading to Lifecycle Methods.
+
+Lets refactor our geolocation method to lifecycles.
+
+> Load some funky stuff on the right time:
+
+```jsx
+	componentDidMount() {
+		console.log("My season component just rendered.");
+
+		// putting getCurrentPosition here, avoid multiples fetchs on comp render.
+		window.navigator.geolocation.getCurrentPosition(
+			position =>
+				this.setState({
+					lat: position.coords.latitude,
+					long: position.coords.longitude
+				}),
+			err =>
+				this.setState({
+					errorMessage: err.message
+				})
+		);
+    }
+```
+
+
