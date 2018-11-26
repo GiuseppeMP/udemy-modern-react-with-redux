@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-//import SeasonDisplay from "./SeasonDisplay";
+import SeasonDisplay from "./SeasonDisplay";
 
 class App extends React.Component {
 	// equivalent to constructor function thank the babeljs
@@ -47,7 +47,7 @@ class App extends React.Component {
 		} else if (!this.state.errorMessage && this.state.lat) {
 			return (
 				<div data-react-name={this.state.reactName}>
-					<div>Latitude: {this.state.lat} </div>
+					<SeasonDisplay lat={this.state.lat} />
 				</div>
 			);
 		} else {

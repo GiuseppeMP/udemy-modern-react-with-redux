@@ -1,12 +1,17 @@
-import React from 'react';
+import React from "react";
 
-const SeasonDisplay = () => {
+class SeasonDisplay extends React.Component {
+	state = {
+		reactName: "react-component-season-display"
+	};
 
-
-    return (
-        <div>Season Display</div>
-    );
-
-};
+	render() {
+		return (
+			<div data-react-name={this.state.reactName}>
+				<div>Latitude: {this.props.lat} </div>
+			</div>
+		);
+	}
+}
 
 export default SeasonDisplay;

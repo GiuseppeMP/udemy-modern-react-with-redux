@@ -951,3 +951,8 @@ class App extends React.Component {
 ```
 We can see that thank the babeljs we can use this way to create our construtor.
 
+## lecture 59. Passing State as Props.
+
+How to send state values as props to another components.
+
+
