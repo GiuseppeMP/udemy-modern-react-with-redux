@@ -7,14 +7,15 @@ class App extends React.Component {
 		super(props);
 
 		// init state
-		this.state = { lat: 40 };
+		this.state = { lat: null, long: null };
 
 		// putting getCurrentPosition here, avoid multiples fetchs on comp render.
 		window.navigator.geolocation.getCurrentPosition(
 			(position) => {
 				// we called setState!!
 				this.setState({
-					lat: position.coords.latitude
+					lat: position.coords.latitude,
+					long: position.coords.longitude
 				});
 
 				// we dit not!! this is bad!!
@@ -29,7 +30,7 @@ class App extends React.Component {
 		return (
 			<div name="react-component-app">
 				<div>Latitude: {this.state.lat} </div>
-				<div>Longitude:</div>
+				<div>Longitude: {this.state.long} </div>
 				<SeasonDisplay />
 			</div>
 		);

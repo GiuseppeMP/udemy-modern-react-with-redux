@@ -852,3 +852,7 @@ constructor(props) {
 		);
     }
 ```
+
+## lecture 52. App Lifecycle Walkthrough.
+
+> Details of lecture 51 behavior.
