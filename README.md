@@ -865,7 +865,7 @@ Just save the error message in state. :)
 
 
 
-## lecture 54. Conditionally Rendering Content
+## lecture 54. Conditionally Rendering Content.
 
 1. Render latitude if successed.
 2. Render error if something gonna wrong.
@@ -890,5 +890,21 @@ Component Lifecycle over time:
 > if we code a function called componentDidUpdate, it is called everytime afterwards the component updates by a setState.
 
 > if we code a function called componentWillUnmount, it is called everytime when the component is no longer visible.
+
+## lecture 56. Why Lifecycle Methods.
+
+> Why we will use lifecycle methods?
+
+1. constructor. {its a good place to do one-time setup}
+2. render. {avoid doing anything besides returning JSX}
+3. componentDidMount. {Good place to do data-loading!}
+4. componentDidUpdate. {Good place to do more data loading when state/props change}
+5. componetWillUnmount.{Good place to do cleanup(specially for non-React stuff)}
+
+> Others lifecycle methods (rarely used)
+
+1. shouldComponentUpdate.
+2. getDerivedStateFromProps.
+3. getSnapshotBeforeUpdate.
 
 
