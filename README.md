@@ -856,3 +856,15 @@ constructor(props) {
 ## lecture 52. App Lifecycle Walkthrough.
 
 > Details of lecture 51 behavior.
+
+## lecture 53. Handling Errors Gracefully
+
+How to handling errors, in almost all new react players forget to handle errors. If anything gonna wrong, we cant stop to render the component and say to user there are a problem.
+
+Just save the error message in state. :)
+
+
+
+
+
+
