@@ -7,19 +7,28 @@ class App extends React.Component {
 		super(props);
 
 		// init state
-		this.state = { lat: null };
+		this.state = { lat: 40 };
+
+		// putting getCurrentPosition here, avoid multiples fetchs on comp render.
+		window.navigator.geolocation.getCurrentPosition(
+			(position) => {
+				// we called setState!!
+				this.setState({
+					lat: position.coords.latitude
+				});
+
+				// we dit not!! this is bad!!
+				// this.state.lat = position.coords.latitude;
+			},
+			(error) => console.log(error)
+		);
 	}
 
 	// React says we have to define render method!!
 	render() {
-		window.navigator.geolocation.getCurrentPosition(
-			(position) => console.log(position),
-			(error) => console.log(error)
-		);
-
 		return (
-			<div>
-				<div>Latitude:</div>
+			<div name="react-component-app">
+				<div>Latitude: {this.state.lat} </div>
 				<div>Longitude:</div>
 				<SeasonDisplay />
 			</div>

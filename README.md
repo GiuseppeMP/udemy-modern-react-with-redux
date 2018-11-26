@@ -823,3 +823,32 @@ class App extends React.Component {
 > We need to specificy constructor function in class component.
 >> In the constructor is a good place to initialize the state.
 
+
+
+## lecture 51. Updating State Properties.
+
+> Updating state object on a component causes a instantly rerender.
+>>Never assign directly on state.
+
+```jsx
+constructor(props) {
+		super(props);
+
+		// init state
+		this.state = { lat: 40 };
+
+		// putting getCurrentPosition here, avoid multiples fetchs on comp render.
+		window.navigator.geolocation.getCurrentPosition(
+			(position) => {
+				// we called setState!!
+				this.setState({
+					lat: position.coords.latitude
+                });
+                
+                // we dit not!! this is bad!!
+                // this.state.lat = position.coords.latitude;
+			},
+			(error) => console.log(error)
+		);
+    }
+```
