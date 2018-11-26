@@ -4,7 +4,8 @@ class SeasonDisplay extends React.Component {
 	state = {
 		reactName: "react-component-season-display",
 		season: null,
-		seasonTxt: null
+		seasonTxt: null,
+		seasonIcon: null
 	};
 
 	getSeason(lat, month) {
@@ -20,7 +21,8 @@ class SeasonDisplay extends React.Component {
 		this.setState({
 			season: this.getSeason(this.props.lat, new Date().getMonth()),
 			seasonTxt:
-				this.season === "winter" ? "Burr, its chilly" : "Lets hit the Beach!"
+				this.season === "winter" ? "Burr, its chilly" : "Lets hit the Beach!",
+			seasonIcon: this.season === "winter" ? "snowflake" : "sun"
 		});
 	}
 
@@ -29,7 +31,10 @@ class SeasonDisplay extends React.Component {
 			<div data-react-name={this.state.reactName}>
 				<div>Latitude: {this.props.lat} </div>
 				<div>Season: {this.state.season}</div>
-				<h1>{this.state.seasonTxt}</h1>
+				<h1>
+					{this.state.seasonTxt}{" "}
+					<i className={`${this.state.seasonIcon} icon`} />
+				</h1>
 			</div>
 		);
 	}

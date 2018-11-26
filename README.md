@@ -978,3 +978,13 @@ If is winter we need to display 'Chuur'!
 If is summer we need to display 'Lets hit the beach!';
 
 
+
+## lecture 62. Showing Icons.
+
+> semantic-ui.com, find icons.
+
+```jsx
+    <i className={`${this.state.seasonIcon} icon`} />
+```
+
+
