@@ -745,3 +745,10 @@ We can use mozilla api:
 1. In app component use the mozilla api.
 
 > window.navigator.geolocation.getCurrentPosition();
+
+
+## lecture 45. Resetting Geolocation Preferences.
+
+If the getCurrentPosition() fails, we must reset the geo preferences.
+
+Just click block prompt to emulate the error.
