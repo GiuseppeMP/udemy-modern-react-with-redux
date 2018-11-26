@@ -97,9 +97,15 @@ ReactDOM.render(
 
 3. '<App/>' is the name of the react component, and #root is the div present in public/index.html that we want to put the component.
 
+## lecture 11. Link to Completed Github Repo.
+
+If you get stuck at any point in time in this course, you can always compare your code against the completed version of each project.
+
+The completed code for each project can be found here: https://github.com/StephenGrider/reduxcode
+
 # 25/nov/18 - Building Content with JSX!
 
-## lecture 11. What is JSX.
+## lecture 12. What is JSX.
 
 First of all, the browser does not understand what .jsx is, so babel comes in, it is a javascript compiler. Its convert any jsx or js newers versions to ES5.
 
@@ -193,7 +199,7 @@ var App = function App() {
 };
 ```
 
-## lecture 12. Converting HTML to JSX.
+## lecture 13. Converting HTML to JSX.
 
 1. HTML != JSX.
 2. JSX isn't HTML.
@@ -223,7 +229,7 @@ var App = function App() {
 5. An error is expected, because HTML isn't JSX.
 
 
-## lecture 13. Inline Styling with JSX.
+## lecture 14. Inline Styling with JSX.
 
 ### HTML vs JSX
 
@@ -243,7 +249,7 @@ JSX:
 We need to convert properties name from baby-case to camelCase like:  first-name -> firstName, background-color -> backgroundColor and so on.
 
 
-## lecture 14. Converting Styling to JSX Format
+## lecture 15. Converting Styling to JSX Format
 
 Steps.
 
@@ -254,7 +260,7 @@ Steps.
 5. Ex: before: style="background-color:blue; color:white" after: style={{backgroundColor:'blue', color:'white'}} .
 
 
-## lecture 15. class vs className
+## lecture 16. class vs className
 
 Adding a class to an element uses different syntax.
 
@@ -272,7 +278,7 @@ The reason os this is because the keyword class is a reserved keyword in js, so,
 
 > Today have a discution in communitty about create the support of 'class' inside JSX.
 
-## lecture 16. Referencing JS Variables in JSX.
+## lecture 17. Referencing JS Variables in JSX.
 
 We can reffer js variables or functions in JSX using {} (brackets).
 
@@ -291,7 +297,7 @@ function getBtnText(){
 
 ``` 
 
-## lecture 17. Values JSX Can't Show.
+## lecture 18. Values JSX Can't Show.
 
 
 Some values cant be used on JSX. We can use a lot of types on variable, like:
@@ -313,7 +319,7 @@ Works:
 <button style={{backgroundColor:'blue', color:'white'}}>{buttonText.text}</button>
 ```
 
-## lecture 18. Finding Forbidden Property Names.
+## lecture 19. Finding Forbidden Property Names.
 
 Exists properties that are forbidden, we must keep our browser console open to see warning messages of this kind of errors, for example:
 
@@ -333,7 +339,7 @@ So, 'for', it is a forbidden HTML property we must fix:
     <label htmlFor="name" className="label">{labbelText}</label>
 ```
 
-## lectures 19, 20. Exercise Introduction, Coding Exercise 1: JSX Interpolation.
+## lectures 20, 21. Exercise Introduction, Coding Exercise 1: JSX Interpolation.
 
 Solution:
 
@@ -362,7 +368,7 @@ Solution:
 # 25/nov/18 - Communicating with Props!
 
 
-## lecture 21. Three Tenets of Components.
+## lecture 22. Three Tenets of Components.
 
 In react there are three tenets we must know, we create a component at time, but a typical react app is a set of component inside each other.
 
@@ -372,13 +378,13 @@ In react there are three tenets we must know, we create a component at time, but
 
 > Component Configuration - We should be able to configure a component when it is created.
 
-## lecture 22. Application Overview.
+## lecture 23. Application Overview.
 
 Lets generated another project by sides 'jsx' project. lets use create-react-app components.
 
 We going to build a comments component.
 
-## lecture 23. Getting Some Free Styling.
+## lecture 24. Getting Some Free Styling.
 
 Lets create comments box.
 
@@ -398,12 +404,12 @@ Lets create comments box.
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
 ```
 
-## lecture 24. Naive Component Approach.
+## lecture 25. Naive Component Approach.
 
 Create comment html block code.
 
 
-## lecture 25. Specifying images in JSX.
+## lecture 26. Specifying images in JSX.
 
 Lets use faker js, open library that helps you to generate a lot of fake data.
 
@@ -430,13 +436,13 @@ Lets install it:
 <img alt="avatar" src={Faker.image.avatar()}/>
 ```
 
-## lecture 26. Duplicating a Single Component.
+## lecture 27. Duplicating a Single Component.
 
 We need to duplicate all JSX to each comment, this is painful, the file becomes larges and we dont know what hack we are looking at.
 
 Next lecture we going to refactor this.
 
-## lecture 27. Extracting JSX to New Components.
+## lecture 28. Extracting JSX to New Components.
 
 Creating a Reusable & Configurable Component.
 
@@ -448,7 +454,7 @@ Creating a Reusable & Configurable Component.
 6. We need to change the hardcoded information to props.
 
 
-## lecture 28. Component Nesting.
+## lecture 29. Component Nesting.
 
 1. Our components does not have any bound. index.js -> App COmponent CommentDetail.js -> Comment Detail Component.
 
@@ -468,7 +474,7 @@ Creating a Reusable & Configurable Component.
 </div>
 ```
 
-## lecture 29. React's Props System
+## lecture 30. React's Props System
 
 Its always a good practice make Component Hierarchy Diagram.
 
@@ -484,7 +490,7 @@ Example:
 >>App -> prop: Name='Peter' -> CommentDetail
 
 
-## lecture 30. Passing and Receiving Props
+## lecture 31. Passing and Receiving Props
 
 The props system have two phases, first we need to provide information, the second we need to receive this information on child and handle with it.
 
@@ -516,7 +522,7 @@ const CommentDetail = (props) => {
 }
 ```
 
-## lecture 31. Passing Multiples Props
+## lecture 32. Passing Multiples Props
 
 We see before how to pass props. Its just need to write the property name equals property value ex(author="Peter").
 
@@ -550,17 +556,17 @@ Let's pass the other props, timeAgo and text.
     );
 ```
 
-## lecture 32. Passing Props - Solutions
+## lecture 33. Passing Props - Solutions
 
 Coded solution.
 
-## lecture 33. Component Reuse
+## lecture 34. Component Reuse
 
 Lets add two buttons to our comment component for the features: (Approve) (Reject).
 
 Lets create another component called ApprovalCard to keep those buttons. This new component show a text and offer two options: approve or reject.
 
-## lecture 34. Implementing an Approval Card.
+## lecture 35. Implementing an Approval Card.
 
 1. Create ApprovalCard.js file.
 2. Create a react component with card html from semantic-ui.com
@@ -569,7 +575,7 @@ Lets create another component called ApprovalCard to keep those buttons. This ne
 5. Use ApprovalCard component bysides CommentDetail component.
 
 
-## lecture 35. Showing custom children.
+## lecture 36. Showing custom children.
 
 We need to show the approvalCard inside CommentDetail, but we need to keeps the reusability of the components.
 
@@ -588,18 +594,18 @@ When we passing a entire component inside another, its add to props always as ch
 <div className="content">{props.children}</div>
 ```
 
-## lecture 36. Component Reuse.
+## lecture 37. Component Reuse.
 
 This funky way allow us to reuse the approvalCard just wrapping anything, html or plainText for approves.
 
 Just make sure we are using props.children somewhere in the parent.
 
 
-## lecture 37. Exercise - Props and reusable.
+## lecture 38. Exercise - Props and reusable.
 
 Just pass props as attrs.
 
-## lecture 38. Coding Exercise 2: Test Your Knowledge: Props.
+## lecture 39. Coding Exercise 2: Test Your Knowledge: Props.
 
 Exercise solution:
 
@@ -628,7 +634,7 @@ Exercise solution:
 </script>
 ```
 
-## lecture 39. Exercise - Children.
+## lecture 40. Exercise - Children.
 
 Extract content duplicated into another component.
 
@@ -636,7 +642,7 @@ Extract content duplicated into another component.
 <div className="ui placeholder segment">... </div>
 ```
 
-## lecture 40. Children Exercise Solution.
+## lecture 41. Children Exercise Solution.
 
 ```jsx
  const Segment = (props) => {
@@ -673,7 +679,7 @@ Extract content duplicated into another component.
 
 # 25/nov/18 - Structuring Apps with Class-Based Components
 
-## lecture 41. Class-Based Components.
+## lecture 42. Class-Based Components.
 
 > The lecture 10 says: React component is a function or a class, that produces HTML to show the user.
 
@@ -696,7 +702,7 @@ Until now we are just using function components, on this lecture we going to sta
     1. Easir to do things when the app first starts.
 
 
-## lecture 42. Application Overview.
+## lecture 43. Application Overview.
 
 Lets build seasons application, that detected user location and timezone afterwards changes your style.
 
@@ -721,7 +727,7 @@ Lets build seasons application, that detected user location and timezone afterwa
 3. Change text and styling based on location + month.
 
 
-## lecture 43. Scaffolding the App.
+## lecture 44. Scaffolding the App.
 
 1. Go to semantic-ui.com, add css to the index.html.
 2. Erase all files in src folder.
@@ -736,7 +742,7 @@ Lets build seasons application, that detected user location and timezone afterwa
 
 
 
-## lecture 44. Getting a Users Physical Location.
+## lecture 45. Getting a Users Physical Location.
 
 We can use mozilla api:
 
@@ -747,19 +753,19 @@ We can use mozilla api:
 > window.navigator.geolocation.getCurrentPosition();
 
 
-## lecture 45. Resetting Geolocation Preferences.
+## lecture 46. Resetting Geolocation Preferences.
 
 If the getCurrentPosition() fails, we must reset the geo preferences.
 
 Just click block prompt to emulate the error.
 
-## lecture 46. Handling Async Operations with Functional Components.
+## lecture 47. Handling Async Operations with Functional Components.
 
 We cant keep state on functional component because its runs once and not keeps state. So, in this case, we are rendering the content but we got the geolocation answer afterwards.
 
 > Answer: Refactoring to Class Component. Functional Component does not supports async handle.
 
-## lecture 47. Refactoring from Functional to Class Components.
+## lecture 48. Refactoring from Functional to Class Components.
 
 To refactor a functional comp to class comp, we need to attemp some requirements.
 
@@ -795,3 +801,16 @@ class App extends React.Component {
 
 }
 ```
+
+# 26/nov/18 Section 5 - State in React Components.
+
+## lecture 49. The Rules of State.
+
+1. Only usable with class components.
+2. You will confuse props with state :(.
+3. 'State' is a JS object that contains data relevant to a component.
+4. Updating 'state' on a component causes the component to (almost) instantly rerender.
+5. State must be initialized when a component is created.
+6. **State can only be updated using the function 'setState'.**
+
+> Technically can be used with funcional components using the 'hooks' system.
