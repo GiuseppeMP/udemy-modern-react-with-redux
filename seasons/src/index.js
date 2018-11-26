@@ -1,17 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import SeasonDisplay from "./SeasonDisplay";
+//import SeasonDisplay from "./SeasonDisplay";
 
 class App extends React.Component {
 	constructor(props) {
 		super(props);
 
 		// init state
-		this.state = { lat: null, long: null, errorMessage: "" };
+		this.state = {
+			reactName: "react-component-app",
+			lat: null,
+			long: null,
+			errorMessage: ""
+		};
 
 		// putting getCurrentPosition here, avoid multiples fetchs on comp render.
 		window.navigator.geolocation.getCurrentPosition(
-			(position) => {
+			position => {
 				// we called setState!!
 				this.setState({
 					lat: position.coords.latitude,
@@ -21,7 +26,7 @@ class App extends React.Component {
 				// we dit not!! this is bad!!
 				// this.state.lat = position.coords.latitude;
 			},
-			(err) => {
+			err => {
 				this.setState({
 					errorMessage: err.message
 				});
@@ -31,14 +36,25 @@ class App extends React.Component {
 
 	// React says we have to define render method!!
 	render() {
-		return (
-			<div name="react-component-app">
-				<div>Latitude: {this.state.lat} </div>
-				<div>Longitude: {this.state.long} </div>
-				<div>Error: {this.state.errorMessage} </div>
-				<SeasonDisplay />
-			</div>
-		);
+		if (this.state.errorMessage && !this.state.lat) {
+			return (
+				<div data-react-name={this.state.reactName}>
+					<div>Error: {this.state.errorMessage} </div>
+				</div>
+			);
+		} else if (!this.state.errorMessage && this.state.lat) {
+			return (
+				<div data-react-name={this.state.reactName}>
+					<div>Latitude: {this.state.lat} </div>
+				</div>
+			);
+		} else {
+			return (
+				<div data-react-name={this.state.reactName}>
+					<div>Loading!</div>
+				</div>
+			);
+		}
 	}
 }
 

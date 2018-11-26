@@ -865,6 +865,12 @@ Just save the error message in state. :)
 
 
 
+## lecture 54. Conditionally Rendering Content
+
+1. Render latitude if successed.
+2. Render error if something gonna wrong.
+3. Render loading if geolocation do not answer yet.
+
 
 
 
