@@ -13,7 +13,9 @@ const App = () => {
 
     return (
         <div>        
-            <div>Hello There!</div>
+            <div>Hello There!</div>          
+            <div>Latitude:</div>  
+            <div>Longitude:</div>  
             <SeasonDisplay/>
         </div>
     );

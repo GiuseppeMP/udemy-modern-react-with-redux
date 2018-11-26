@@ -752,3 +752,10 @@ We can use mozilla api:
 If the getCurrentPosition() fails, we must reset the geo preferences.
 
 Just click block prompt to emulate the error.
+
+## lecture 46. Handling Async Operations with Functional Components.
+
+We cant keep state on functional component because its runs once and not keeps state. So, in this case, we are rendering the content but we got the geolocation answer afterwards.
+
+> Answer: Refactoring to Class Component. Functional Component does not supports async handle.
+
