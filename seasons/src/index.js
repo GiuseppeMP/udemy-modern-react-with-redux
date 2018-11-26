@@ -34,6 +34,18 @@ class App extends React.Component {
 		);
 	}
 
+	componentDidMount() {
+		console.log("My component just rendered.");
+	}
+
+	componentDidUpdate() {
+		console.log("My component just updated.");
+	}
+
+	componentWillUnMount() {
+		console.log("My component gonna be unmount.");
+	}
+
 	// React says we have to define render method!!
 	render() {
 		if (this.state.errorMessage && !this.state.lat) {

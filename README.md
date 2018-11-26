@@ -872,5 +872,23 @@ Just save the error message in state. :)
 3. Render loading if geolocation do not answer yet.
 
 
+# 26/nov/18 Section 6 - Understanding Lifecycle Methods.
+
+
+## lecture 55. Introducing Lifecycle Methods.
+
+Component Lifecycle over time:
+
+1. constructor.
+2. render. {content visible on screen}
+3. componentDidMount. {sit and wait for updates...}.
+4. componentDidUpdate. { sit and wait until this component is not longer shown}.
+5. componentWillUnmount.
+
+> if we code a function called componentDidMount, it is called once one time after component render.
+
+> if we code a function called componentDidUpdate, it is called everytime afterwards the component updates by a setState.
+
+> if we code a function called componentWillUnmount, it is called everytime when the component is no longer visible.
 
 
