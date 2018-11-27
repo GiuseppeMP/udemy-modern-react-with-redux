@@ -1179,4 +1179,15 @@ Search for images from text input text.
 
 4. Lets create two components, SearchBar and ImageList.
 
-4.1 App -> SearchBar, App -> ImageList.
+4.1. App -> SearchBar, App -> ImageList.
+
+
+## lecture 73. Adding Some Project Structure.
+
+1. Delete all generated files in src folder.
+
+2. Create a index.js file.
+
+3. Create a folder components and inside of it, create a file App.js.
+
+4. Write the App.js as a functional component and import on index.js.
