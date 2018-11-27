@@ -1277,6 +1277,13 @@ Controlled -> There are a state variable bounded on input.
   }
 ```
 
+## lecture 79. More on Controlled Elements.
+
+Controlled can change the values by logical functions like filters and capitalize.
+
+Uncontrolled cant change the inputed value by the user.
+
+
 
 
 
