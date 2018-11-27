@@ -1198,3 +1198,21 @@ Search for images from text input text.
 
 1. Lets create a SearchBar.js in components.
 
+2. Add a input text and import on App.js
+
+
+
+## lecture 75. Adding a Touch of style.
+
+> Go to semantic-ui.com
+
+1. Lets install semantic ui using cdn to be much easier for us. https://cdnjs.com/libraries/semantic-ui
+
+2. Find for semantic-ui.css.min
+
+3. Inside folder public, find for index.html and add the css https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css;
+
+```html
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+```
+
