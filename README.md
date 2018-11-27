@@ -1216,3 +1216,19 @@ Search for images from text input text.
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
 ```
 
+
+## lecture 76. Creating Events Handlers.
+
+Lets handle some user input.
+
+1. Using onchange. Never uses () on onChange attr, this causes the function be called on render phase.
+
+### List of events JSX:
+
+* onClick -> User click on element.
+* onChange -> User change the element value.
+* onSubmit -> User submit the form.
+
+
+
+
