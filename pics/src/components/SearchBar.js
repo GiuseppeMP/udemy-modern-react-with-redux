@@ -9,6 +9,11 @@ export default class SearchBar extends Component {
     console.log(e.target.value);
   }
 
+  onFormSubmit(e) {
+    e.preventDefault();
+    console.log(this.state.term);
+  }
+
   componentDidUpdate() {
     console.log("I was updated;");
   }
@@ -16,7 +21,7 @@ export default class SearchBar extends Component {
   render() {
     return (
       <div className="ui segment">
-        <form className="ui form">
+        <form className="ui form" onSubmit={this.onFormSubmit}>
           <div className="field">
             <label htmlFor="search">Image Search</label>
             <input

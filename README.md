@@ -1284,6 +1284,19 @@ Controlled can change the values by logical functions like filters and capitaliz
 Uncontrolled cant change the inputed value by the user.
 
 
+## lecture 80. Handling Form Submittal.
 
+Lets make the Enter submit the form but we dont want to refresh all page.
+
+1. Add to form the event 'onSubmit';
+2. Create a method called onFormSubmit.
+3. Add onSubmit={this.onFormSubmit};
+
+```jsx
+  onFormSubmit(e) {
+    e.preventDefault();
+    console.log(this.state.term);
+  }
+```
 
 
