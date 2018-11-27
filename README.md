@@ -1098,3 +1098,22 @@ Use a helper function to render some JSX conditionaly.
 Just do a review of all code wrote until now.
 
 >https://github.com/GiuseppeMP/udemy-modern-react-with-redux
+
+
+## lecture 69. Exercise class-based-component.
+
+Solution:
+
+```jsx
+ class UserForm extends React.Component {
+    render(){
+        return (
+        <form>
+            <label>Enter a username:</label>
+            <input />
+        </form>
+        );
+    };
+
+}
+```
