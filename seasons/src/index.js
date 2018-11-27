@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import SeasonDisplay from "./SeasonDisplay";
+import Spinner from "./Spinner";
 
 class App extends React.Component {
 	// equivalent to constructor function thank the babeljs
@@ -50,13 +51,9 @@ class App extends React.Component {
 					<SeasonDisplay lat={this.state.lat} />
 				</div>
 			);
-		} else {
-			return (
-				<div data-react-name={this.state.reactName}>
-					<div>Loading!</div>
-				</div>
-			);
 		}
+
+		return <Spinner />;
 	}
 }
 

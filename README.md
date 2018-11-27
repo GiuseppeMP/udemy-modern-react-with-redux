@@ -1017,3 +1017,9 @@ import 'SeasonDisplay.css'
 ```
 This works because webpack takes care about the css file.
 
+## lecture 65. Showing a Loading Spinner.
+
+Lets think about user experience. Go for a loading component.
+
+> Look for a loading in semantic-ui.com and create loader component.
+
