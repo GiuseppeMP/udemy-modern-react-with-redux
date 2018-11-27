@@ -8,6 +8,20 @@ class SeasonDisplay extends React.Component {
 		seasonIcon: null
 	};
 
+	// Pattern to avoid ternaries
+	seasonConfig = {
+		summer: {
+			name: "summer",
+			text: "Let's hit the Beach!",
+			iconName: "sun"
+		},
+		winter: {
+			name: "winter",
+			text: "Burr, its chilly",
+			iconName: "snowflake"
+		}
+	};
+
 	getSeason(lat, month) {
 		console.log(lat + " " + month);
 		if (month > 2 && month < 9) {
@@ -18,11 +32,13 @@ class SeasonDisplay extends React.Component {
 	}
 
 	componentDidMount() {
+		let seasonTmp = this.seasonConfig[
+			this.getSeason(this.props.lat, new Date().getMonth())
+		];
 		this.setState({
-			season: this.getSeason(this.props.lat, new Date().getMonth()),
-			seasonTxt:
-				this.season === "winter" ? "Burr, its chilly" : "Lets hit the Beach!",
-			seasonIcon: this.season === "winter" ? "snowflake" : "sun"
+			season: seasonTmp.name,
+			seasonTxt: seasonTmp.text,
+			seasonIcon: seasonTmp.iconName
 		});
 	}
 

@@ -987,4 +987,22 @@ If is summer we need to display 'Lets hit the beach!';
     <i className={`${this.state.seasonIcon} icon`} />
 ```
 
+## lecture 63. Extracting OPtions to Config Objects.
 
+Lets refactor this things to eliminated that duplicated ternaries. Using a pattern, config object!
+
+```jsx
+// Pattern to avoid ternaries
+	seasonConfig = {
+		summer: {
+			name: "summer",
+			text: "Let's hit the Beach!",
+			iconName: "sun"
+		},
+		winter: {
+			name: "winter",
+			text: "Burr, its chilly",
+			iconName: "snowflake"
+		}
+	};
+```
