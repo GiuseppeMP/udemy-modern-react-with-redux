@@ -1,4 +1,5 @@
 import React from "react";
+import "./SeasonDisplay.css";
 
 class SeasonDisplay extends React.Component {
 	state = {
@@ -44,13 +45,13 @@ class SeasonDisplay extends React.Component {
 
 	render() {
 		return (
-			<div data-react-name={this.state.reactName}>
-				<div>Latitude: {this.props.lat} </div>
-				<div>Season: {this.state.season}</div>
-				<h1>
-					{this.state.seasonTxt}{" "}
-					<i className={`${this.state.seasonIcon} icon`} />
-				</h1>
+			<div
+				className={`season-display ${this.state.season}`}
+				data-react-name={this.state.reactName}
+			>
+				<i className={`${this.state.seasonIcon} icon icon-left massive`} />
+				<h1>{this.state.seasonTxt}</h1>
+				<i className={`${this.state.seasonIcon} icon icon-right massive`} />
 			</div>
 		);
 	}

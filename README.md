@@ -1006,3 +1006,14 @@ Lets refactor this things to eliminated that duplicated ternaries. Using a patte
 		}
 	};
 ```
+## lecture 64. Adding Some Styling.
+
+> semantic-ui.com, find icons and find some css.
+
+We can create a .css with the name of js, to refer the styling of my component. React does not scan your src folder to load css files, this need to made manualy with import;
+
+```jsx
+import 'SeasonDisplay.css'
+```
+This works because webpack takes care about the css file.
+
