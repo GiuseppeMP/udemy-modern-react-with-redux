@@ -1023,3 +1023,38 @@ Lets think about user experience. Go for a loading component.
 
 > Look for a loading in semantic-ui.com and create loader component.
 
+
+## lecture 66. Specifying Default Props.
+
+Lets make default props to Loader component.
+
+To create default values just use like this (two ways):
+
+1. Or expression: {props.message || 'Loading...'}
+2. Or using the fancy way defaultProps;
+
+```jsx 
+    Component.defaultProps ={
+        message : 'Loading...'
+    }
+```
+
+### Example:
+
+```jsx
+import React from "react";
+
+const Spinner = props => {
+	return (
+		<div className="ui active dimmer indeterminate">
+			<div className="ui big text loader">{props.message}</div>
+		</div>
+	);
+};
+
+Spinner.defaultProps = {
+	message: "Loading..."
+};
+
+export default Spinner;
+```
