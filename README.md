@@ -1299,4 +1299,15 @@ Lets make the Enter submit the form but we dont want to refresh all page.
   }
 ```
 
+## lecture 81. Understanding 'this' in javascript.
 
+Why on onFormSubmit this.state.term is undefined.
+
+Instance of SearchBar
+    state
+    render
+    onFormSubmit
+    this -> giver access of SearchBar.
+
+    > What is 'this' used for in a class?
+    > How is the value of 'this' determined in a function.
