@@ -37,8 +37,7 @@ class App extends React.Component {
 		console.log("My component gonna be unmount.");
 	}
 
-	// React says we have to define render method!!
-	render() {
+	renderContent() {
 		if (this.state.errorMessage && !this.state.lat) {
 			return (
 				<div data-react-name={this.state.reactName}>
@@ -54,6 +53,13 @@ class App extends React.Component {
 		}
 
 		return <Spinner />;
+	}
+
+	// React says we have to define render method!!
+	render() {
+		return (
+			<div data-react-name={this.state.reactName}>{this.renderContent()}</div>
+		);
 	}
 }
 

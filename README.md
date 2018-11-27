@@ -1058,3 +1058,37 @@ Spinner.defaultProps = {
 
 export default Spinner;
 ```
+
+## lecture 67. Avoiding Conditionals in Render.
+
+Lets add a red border to loading component without repeat those lines, lets use a helper function.
+
+Use a helper function to render some JSX conditionaly.
+
+```jsx
+
+	renderContent() {
+		if (this.state.errorMessage && !this.state.lat) {
+			return (
+				<div data-react-name={this.state.reactName}>
+					<div>Error: {this.state.errorMessage} </div>
+				</div>
+			);
+		} else if (!this.state.errorMessage && this.state.lat) {
+			return (
+				<div data-react-name={this.state.reactName}>
+					<SeasonDisplay lat={this.state.lat} />
+				</div>
+			);
+		}
+
+		return <Spinner />;
+	}
+
+	// React says we have to define render method!!
+	render() {
+		return (
+			<div data-react-name={this.state.reactName}>{this.renderContent()}</div>
+		);
+	}
+```
