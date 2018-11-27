@@ -1117,3 +1117,33 @@ Solution:
 
 }
 ```
+
+## lecture 70. Updating Components with State.
+
+
+Solution:
+
+```jsx
+class Clock extends React.Component {
+    state = {
+        time : null
+    };
+
+    componentDidMount() {
+        setInterval(() => {
+            this.setState({
+                time : new Date().toLocaleTimeString()    
+            });
+            
+        }, 1000)
+    }
+    
+    render() {
+        return (
+            <div className="time">
+                The time is: {this.state.time}
+            </div>
+        );
+    }
+}
+```
