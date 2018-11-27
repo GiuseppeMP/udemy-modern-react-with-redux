@@ -9,10 +9,10 @@ export default class SearchBar extends Component {
     console.log(e.target.value);
   }
 
-  onFormSubmit(e) {
+  onFormSubmit = e => {
     e.preventDefault();
     console.log(this.state.term);
-  }
+  };
 
   componentDidUpdate() {
     console.log("I was updated;");

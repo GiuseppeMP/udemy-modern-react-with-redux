@@ -1311,3 +1311,38 @@ Instance of SearchBar
 
     > What is 'this' used for in a class?
     > How is the value of 'this' determined in a function.
+
+
+## lecture 82. Solving Context Issues.
+
+We can resolve this using many different ways:
+
+1. constructor bind:
+```jsx
+    this.drive = this.drive.bind(this);
+```
+2. Using arrow function. Arrow function always bind 'this' automaticly. [BEST]
+```jsx
+ onFormSubmit =(e) => {
+    e.preventDefault();
+    console.log(this.state.term);
+  }
+```
+
+3. We can pass directly an arrow function on onSubmit attribute:
+
+ ```jsx
+ <form className="ui form" onSubmit={ (e) =>this.onFormSubmit()}>
+
+onFormSubmit(e) {
+    e.preventDefault();
+    console.log(this.state.term);
+  }
+```
+
+
+
+
+## lecture 82.
+## lecture 83.
+## lecture 84.
