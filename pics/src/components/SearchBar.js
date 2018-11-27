@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class SearchBar extends Component {
   state = {
-    searchTerm: null
+    term: ""
   };
 
   onInputChange(e) {
@@ -19,7 +19,16 @@ export default class SearchBar extends Component {
         <form className="ui form">
           <div className="field">
             <label htmlFor="search">Image Search</label>
-            <input type="text" id="search" onChange={this.onInputChange} />
+            <input
+              type="text"
+              id="search"
+              value={this.state.term}
+              onChange={e =>
+                this.setState({
+                  term: e.target.value
+                })
+              }
+            />
           </div>
         </form>
       </div>

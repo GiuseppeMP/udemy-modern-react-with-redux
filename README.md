@@ -1241,5 +1241,42 @@ Lets handle some user input.
     }
 ```
 
+## lecture 78. Uncontrolled vs Controlled Elements.
+
+### Uncontrolled vs Controlled Elements.
+
+Uncontrolled -> There are not state variable bounded on input.
+
+Controlled -> There are a state variable bounded on input.
+
+```jsx
+
+ state = {
+    searchTerm: null
+  };
+  render() {
+    return (
+      <div className="ui segment">
+        <form className="ui form">
+          <div className="field">
+            <label htmlFor="search">Image Search</label>
+            <input
+              type="text"
+              id="search"
+              value={this.state.searchTerm}
+              onChange={e =>
+                this.setState({
+                  term: e.target.value
+                })
+              }
+            />
+          </div>
+        </form>
+      </div>
+    );
+  }
+```
+
+
 
 
