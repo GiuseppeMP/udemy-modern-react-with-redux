@@ -1092,3 +1092,9 @@ Use a helper function to render some JSX conditionaly.
 		);
 	}
 ```
+
+## lecture 68. Breather and Review.
+
+Just do a review of all code wrote until now.
+
+>https://github.com/GiuseppeMP/udemy-modern-react-with-redux
