@@ -1,8 +1,16 @@
 import React, { Component } from "react";
 
 export default class SearchBar extends Component {
+  state = {
+    searchTerm: null
+  };
+
   onInputChange(e) {
     console.log(e.target.value);
+  }
+
+  componentDidUpdate() {
+    console.log("I was updated;");
   }
 
   render() {

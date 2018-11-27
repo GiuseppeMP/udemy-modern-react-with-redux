@@ -1229,6 +1229,17 @@ Lets handle some user input.
 * onChange -> User change the element value.
 * onSubmit -> User submit the form.
 
+## lecture 77. Alternate Event Handler Syntax.
+
+> There is a alternative to use onChange event.
+
+```jsx
+    {e =>
+        this.setState({
+            searchTerm: e.target.value
+        })
+    }
+```
 
 
 
