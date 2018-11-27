@@ -1157,7 +1157,7 @@ class Clock extends React.Component {
 
 Search for images from text input text.
 
-> Challenges 
+> Tech Challenges 
 
 1. How do we get feedback from the user
 2. How do we fetch data from some outside API or server?
@@ -1166,3 +1166,17 @@ Search for images from text input text.
 * Create a project pics.
 * Use create-react-app pics.
 
+## lecture 72. Component Design.
+
+
+> App Challegends
+
+1. Need to get a search term from the user.
+
+2. Need to use that search term to make a request to an outside API and fetch data.
+
+3. Need to take the fetched images and show them on the screen in a list. 
+
+4. Lets create two components, SearchBar and ImageList.
+
+4.1 App -> SearchBar, App -> ImageList.
