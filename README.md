@@ -1147,3 +1147,22 @@ class Clock extends React.Component {
     }
 }
 ```
+
+
+# 26/nov/18 Section 7 - Handling User Input with Forms and Events.
+
+
+## lecture 71. App Overview.
+
+
+Search for images from text input text.
+
+> Challenges 
+
+1. How do we get feedback from the user
+2. How do we fetch data from some outside API or server?
+3. How do we show lists of records?
+
+* Create a project pics.
+* Use create-react-app pics.
+
