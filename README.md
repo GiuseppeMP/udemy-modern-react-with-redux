@@ -1470,6 +1470,14 @@ Lets clean up our code in next section!
 
 3. Lets load the images on next section.
 
+## lecture 93. Review of Map Statements.
 
+How to iterate a array on js:
 
+```jsx
+const numbers = [0,1,2,3,4,5,6]
+
+numbers.map(num => <div>{num}</div>)
+
+```
 
