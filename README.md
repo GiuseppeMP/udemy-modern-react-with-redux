@@ -1422,4 +1422,25 @@ Lets use axios to call unsplash API.
 6. All done.
 
 
+## lecture 88. Handling Requests with Async Await.
+
+we can use async keyword to handle promises.
+
+We can use async keywords, just use 'async' in front of the method, and use 'wait' keyword to assign the async result to a const.
+
+```jsx
+ onSearchSubmit = async term => {
+    console.log(term);
+    const response = await axios.get("https://api.unsplash.com/search/photos", {
+      params: {
+        query: term
+      },
+      headers: {
+        Authorization:
+          "Client-ID 600c50175b92741f2e95dd8c0714508aa114e5f3454c3e5e189b33403af6777d"
+      }
+    });
+    console.log(response.data.results);
+  };
+```
 
