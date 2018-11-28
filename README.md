@@ -1365,3 +1365,22 @@ onSearchSubmit(term) {
 ```
 
 3. Refer on SearchBar the name onSubmit.
+
+
+
+# 27/nov/18 Section 8 - Making API Requests with React.
+
+
+## lecture 85. Fetching Data.
+
+1. Lets use a API to search the images.
+2. Look for http://unsplash.com/join and create an account.
+3. Create an account and create an application.
+4. https://unsplash.com/developers click Your apps.
+5. Click on New application and check all checkboxes terms.
+6. I used Pictures Search React Pics.
+7. Use the development mode.
+8. Copy the Access Key.
+9. /search/photos.
+
+
