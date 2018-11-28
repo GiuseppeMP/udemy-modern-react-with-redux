@@ -1699,3 +1699,19 @@ Well done! Lets do Code Review!
 5. Introduction to React Ref system.
 
 
+
+
+# 28/nov/18 Section 12 - On We Go... To Redux!
+
+
+## lecture 125. Introduction to Redux.
+
+> What is Redux?
+
+1. State management library.
+
+2. Makes creating complex applications easier.
+
+3. Not required to create a React App!
+
+4. Not explicitly designed to work with React.
