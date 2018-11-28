@@ -1499,3 +1499,15 @@ function ImageList(props) {
 }
 export default ImageList;
 ```
+
+## lecture 95. The Purpose of Keys in Lists.
+ 
+ * List of 'To Do' Items.
+
+{ id: 1, task: 'Take ou trash'}
+{ id: 2, task: 'Wash the car'}
+{ id: 3, task: 'Walk the dog'}
+{ id: 4, task: 'Mow the lawn'}
+
+To help react to render just the new itens, use key prop. This approach avoid to rerender a lot of things wich already rendered.
+
