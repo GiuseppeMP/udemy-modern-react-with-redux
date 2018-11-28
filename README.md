@@ -1384,3 +1384,20 @@ onSearchSubmit(term) {
 9. /search/photos.
 
 
+## lecture 86. Axios vs Fetch.
+
+Lets understand the search flow.
+
+[React App] -> [Ajax Client] -> Send me data about pics for cars -> [Unsplash API]
+[React App]                  <=========+++++++++++ response         [Unsplash API]
+
+> Exists two libraries to do so, AXIOS and FETCH.
+>> Axios: 3rd party package. [BEST]
+>> Fetch: function build into modern browsers. [MEH - a lot of code]
+
+Lets install axios, run:
+
+```nodejs
+    npm install --save axios
+```
+For convention, all imports of natives and 3rd parties may stay above of components imports.
