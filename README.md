@@ -1543,3 +1543,22 @@ const images = props.images.map(({ description, id, urls }) => {
 
 Lets use a grid css to our images results!
 
+## lecture 98. Issues of grid css.
+
+Lets fix the grid css problems.
+
+```css
+.image-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 10px;
+    grid-auto-rows: 200px;
+    
+}
+
+.image-list img {
+    width: 250px;
+    height: auto;
+    grid-row-end: span 2;
+}
+```
