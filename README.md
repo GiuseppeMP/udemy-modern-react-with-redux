@@ -1340,9 +1340,14 @@ onFormSubmit(e) {
   }
 ```
 
+## lecture 83. Communicating Chiled To Parent
 
+Is not the job of the SearchBar component to make the query. The right way is this component pick up the term and pass to another component.
 
+How to pass comunicate between components using props. How to pass parent prop down to child component.
 
-## lecture 82.
-## lecture 83.
-## lecture 84.
+1. In App component create a callback called this.onSearchSubmit, and this is passed to child.
+
+2. In child afterwards received the term and the callback function is called if somethings happes.
+
+3. Lets refactor!
