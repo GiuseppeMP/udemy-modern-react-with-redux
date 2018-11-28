@@ -1351,3 +1351,17 @@ How to pass comunicate between components using props. How to pass parent prop d
 2. In child afterwards received the term and the callback function is called if somethings happes.
 
 3. Lets refactor!
+
+## lecture 84. Invoking Callbacks in Children.
+
+1. Refactor App to class-based component.
+2. Pass a callback:
+
+```jsx
+onSearchSubmit(term) {
+    console.log(term);
+  }
+  <SearchBar onSubmit={this.onSearchSubmit} />
+```
+
+3. Refer on SearchBar the name onSubmit.
