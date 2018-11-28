@@ -3,8 +3,8 @@ import React from "react";
 function ImageList(props) {
   console.log(props.images);
 
-  const images = props.images.map(image => {
-    return <img src={image.urls.small} alt="Car." />;
+  const images = props.images.map(({ description, id, urls }) => {
+    return <img key={id} src={urls.small} alt={description} />;
   });
 
   return <div>{images}</div>;

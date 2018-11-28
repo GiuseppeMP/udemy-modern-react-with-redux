@@ -1502,6 +1502,16 @@ export default ImageList;
 
 ## lecture 95. The Purpose of Keys in Lists.
  
+```js
+Warning: Each child in an array or iterator should have a unique "key" prop.
+
+Check the render method of `ImageList`. See https://fb.me/react-warning-keys for more information.
+    in img (at ImageList.js:7)
+    in ImageList (at App.js:25)
+    in div (at App.js:22)
+    in App (at src/index.js:5
+```
+
  * List of 'To Do' Items.
 
 { id: 1, task: 'Take ou trash'}
@@ -1511,3 +1521,14 @@ export default ImageList;
 
 To help react to render just the new itens, use key prop. This approach avoid to rerender a lot of things wich already rendered.
 
+
+## lecture 96. Implementing Keys in Lists.
+
+Lets fix the Key error! We need a find a good property to be the key property value.
+
+```jsx
+const images = props.images.map(({ description, id, urls }) => {
+    return <img key={id} src={urls.small} alt={description} />;
+  });
+```
+**WHAT FUNKY!**
