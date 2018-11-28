@@ -1571,3 +1571,24 @@ The height of images changes everytime and with only css we cant fit the screen.
 
 2. Create as class-based component.
 
+
+## lecture 100. Accessing the DOM with Refs.
+
+***Lets use the component created in lecture 99 to somehow calculate the images height;***
+
+1. Let the ImageCard render itself and its image.
+
+2. Reach into the DOM and figure out the height of the image.
+
+3. Set the image height on state to get the component to rerender.
+
+4. When rerendering, assign a 'grid-row-end' to make sure the image takes up the appropriate space.
+
+
+* Using document.querySelector('img').clientHeight, in react we dont access directly the DOM, for this we use a feature called **React Refs**.
+
+* A React Refs gives acces to a single DOM Element.
+
+* We create refs in the constructor, assign them to instance variable, then pass to a particular JSX element as props.
+
+
