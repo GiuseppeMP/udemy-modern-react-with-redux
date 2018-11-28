@@ -1680,3 +1680,22 @@ To get the image height after load we need a callback on imageload.
     grid-row-end: span 2;
 }
 ```
+
+
+## lecture 104. App Review.
+
+Well done! Lets do Code Review!
+
+1. Arrow function always do automaticly bind of this.
+
+2. Passing callback function to childs.
+
+3. Iterating a list o render JSX.
+
+3.1 Uses of key property to avoid unnecessary rerender.
+
+4. Using react to fix css grid spans.
+
+5. Introduction to React Ref system.
+
+
