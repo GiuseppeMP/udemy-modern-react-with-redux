@@ -1625,3 +1625,22 @@ class ImageCard extends Component {
 
 But this approach are taking clientHeight as 0, because componentDidMount execute to early, before the DOM loads the image and discovery the height, lets figure out how to fix this in next lecture.
 
+
+## lecture 102. Callbacks on Image Load.
+
+
+To get the image height after load we need a callback on imageload.
+
+**Solution**
+
+```jsx
+  componentDidMount() {
+    console.log(this.imageRef.current.clientHeight);
+
+    this.imageRef.current.addEventListener("load", this.setSpans);
+  }
+
+  setSpans = () => {
+    console.log(this.imageRef.image.clientHeight);
+  };
+```

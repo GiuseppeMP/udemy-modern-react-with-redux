@@ -9,7 +9,13 @@ class ImageCard extends Component {
 
   componentDidMount() {
     console.log(this.imageRef.current.clientHeight);
+
+    this.imageRef.current.addEventListener("load", this.setSpans);
   }
+
+  setSpans = () => {
+    console.log(this.imageRef.image.clientHeight);
+  };
 
   render() {
     const { description, urls, id } = this.props.image;
