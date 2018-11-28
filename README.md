@@ -1401,3 +1401,25 @@ Lets install axios, run:
     npm install --save axios
 ```
 For convention, all imports of natives and 3rd parties may stay above of components imports.
+
+
+## lecture 87. Viewing Request Results.
+
+Lets use axios to call unsplash API.
+
+1. Look for https://unsplash.com/documentation#search-photos API.
+
+2. Look for api url schema. https://unsplash.com/documentation#location.
+
+3. Voala The API is available at https://api.unsplash.com/. Responses are sent as JSON.
+
+4. Also, look for how to authorization: https://unsplash.com/documentation#authorization.
+    4.1. Wen can include a header with accessKey.
+    4.2. Or we can include accessKey as get param.
+
+5. We need to add query param as well.
+
+6. All done.
+
+
+
