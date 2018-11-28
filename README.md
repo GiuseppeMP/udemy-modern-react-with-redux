@@ -1562,3 +1562,12 @@ Lets fix the grid css problems.
     grid-row-end: span 2;
 }
 ```
+
+## lecture 99. Creating an Image Card Component.
+
+The height of images changes everytime and with only css we cant fit the screen. Lets use a component to do such calculations about image height.
+
+1. Create a component ImageCard.js in components folder.
+
+2. Create as class-based component.
+
