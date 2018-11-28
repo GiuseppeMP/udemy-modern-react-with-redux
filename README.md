@@ -1462,6 +1462,8 @@ Lets clean up our code in next section!
 3. insted of import axios, lets import direcly unsplash.js.
 
 
+# 28/nov/18 Section 9 - Building List of Records.
+
 ## lecture 92. Rendering Lists.
 
 1. Create ImageList.
@@ -1532,3 +1534,12 @@ const images = props.images.map(({ description, id, urls }) => {
   });
 ```
 **WHAT FUNKY!**
+
+
+# 28/nov/18 Section 10 - Using Ref's for DOM Access.
+
+
+## lecture 97. Grid CSS.
+
+Lets use a grid css to our images results!
+
