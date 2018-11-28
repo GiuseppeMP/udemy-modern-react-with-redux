@@ -1644,3 +1644,39 @@ To get the image height after load we need a callback on imageload.
     console.log(this.imageRef.image.clientHeight);
   };
 ```
+
+
+## lecture 103. Dynamic Spans.
+
+** Solution**
+```jsx
+  componentDidMount() {
+    console.log(this.imageRef.current.clientHeight);
+
+    this.imageRef.current.addEventListener("load", this.setSpans);
+  }
+
+  setSpans = () => {
+    const clientHeight = this.imageRef.current.clientHeight;
+    console.log(clientHeight);
+    const spans = Math.ceil(clientHeight / 10);
+    this.setState({
+      spans: spans
+    });
+  };
+``` 
+
+```css
+.image-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 0 10px;
+    grid-auto-rows: 10px;
+
+}
+
+.image-list img {
+    width: 250px;
+    grid-row-end: span 2;
+}
+```
