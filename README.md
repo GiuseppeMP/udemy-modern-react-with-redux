@@ -1814,3 +1814,45 @@ Form Payload ->
 
 Action want to do something, dispatch delivery this to a responsable action payload to a Reducer that changes the state.
 
+
+
+## lecture 130. Moddeling with Redux.
+
+
+>  Go to codepen.io.
+
+1. Add redux, react, react-dom to our dependencies.
+2. Change view to editor layour.
+3. Lets create a policy for each type for each action.
+
+```js
+const createPolicy = (name, amount) => {
+    return {
+
+        type: 'CREATE_POLICY',
+        payload: {
+            name , amount
+        }
+    };
+};
+
+const deletePolicy = (name) => {
+    return {
+
+        type: 'DELETE_POLICY',
+        payload: {
+            name
+        }
+    };
+};
+
+const claimPolicy = (name, amountOfMoneyToCollect) => {
+    return {
+
+        type: 'CLAIM_POLICY',
+        payload: {
+            name, amountOfMoneyToCollect
+        }
+    };
+};
+```
