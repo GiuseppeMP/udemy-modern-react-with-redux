@@ -1902,3 +1902,33 @@ const policies = (listOfPolicies = [], action) =>{
 };
 
 ```
+
+## lecture 133. Testing Our Example.
+
+Lets add redux to our logic.
+
+```js
+
+    const { createStore, combineReducers } = Redux;
+
+    const ourDepartments = combineReducers({
+        accounting: accounting,
+        claimHistory: claimHistory,
+        policies: policies
+    })
+
+    const store = createStore(ourDepartments);
+
+    store.dispatch(createPolicy('Alex', 20));
+    store.dispatch(createPolicy('Joseph', 30));
+    store.dispatch(createPolicy('Aline', 120));
+    store.dispatch(createPolicy('Bob', 220));
+    store.dispatch(createPolicy('Isac', 320));
+
+    store.dispatch(createClaim('Isac', 320));
+    store.dispatch(createClaim('Bob', 100));
+
+    store.dispatch(deletePolicy('Bob'));
+    console.log(store.getState());
+
+```
