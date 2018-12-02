@@ -1715,3 +1715,48 @@ Well done! Lets do Code Review!
 3. Not required to create a React App!
 
 4. Not explicitly designed to work with React.
+
+
+## lecture 126. Redux by Analogy.
+
+> Lets do some funky stuff
+
+* Story to help you undestand Redux.
+
+* Write  some code in Codepen with Redux only.
+
+* Work on a React App.
+
+* Understand how to integrate React with Redux.
+
+
+### Redux Cycle
+
+1. Action Creator
+
+2. Action
+
+3. dispatch
+
+4. Reducers
+
+5. State
+
+*Let's build a insurance company!*
+
+Policy -> CUstomer holds a 'policy', if bad stuff happens to them then we pay them.
+
+Claim ->  Customer had something bad happen to them, we need to pay them.
+
+Terms -> These are insurance terms.
+
+### Solution Insurance Co
+
+*Customer* -> **Form 0** -> *Form Receiver*
+
+**Form 1**  (Claims History) -> Stores a list of all claims ever made.
+
+**Form 2** (Policies) -> Stores a list of who has a policy with our insurance company.
+
+**Form 3** (Accounting) -> Stores a big bag of cash, we pay people from this.
+
