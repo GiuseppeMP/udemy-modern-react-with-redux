@@ -1858,7 +1858,7 @@ const claimPolicy = (name, amountOfMoneyToCollect) => {
 ```
 
 
-## lecture 130. Creating Reducers.
+## lecture 131. Creating Reducers.
 
 ```js
 // Reducers (Departaments!)
@@ -1881,6 +1881,24 @@ const accounting = (bagOfMoney = 100, action) => {
         return bagOfMoney - action.payload.amount;
     }
     return bagOfMoney;
+};
+
+```
+
+## lecture 132. Rules of Reducers.
+
+Never modified the value passing by parameters.
+
+```jsx
+const policies = (listOfPolicies = [], action) =>{
+
+    if(action.type === 'CREATE_POLICY'){
+        return [...listOfPolicies, action.payload.name];
+
+    } else if (action.type === 'DELETE_POLICY'){
+        return listOfPolicies.filter( name => name !== action.payload.name)
+    }
+    return listOfPolicies;
 };
 
 ```
