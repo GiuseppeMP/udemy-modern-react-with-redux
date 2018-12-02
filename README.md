@@ -1778,3 +1778,28 @@ Management Requirement 3 -> Tell me our Accouting balance right now!
 To avoid management asking data everytime, we can store all information of entire co. inside in a 'All Department Data'.
 So, each department have to process the forms and update this centralized data.
 
+
+
+## lecture 128. Finishing the Analogy.
+
+
+Video especification of the departments.
+
+Form type -> Claim
+Form Payload -> 
+``` json
+{ "name"  : "Alexa" , "Claim Amount" : 500.00 }
+```
+
+Form type -> Create
+Form Payload -> 
+``` json
+{ "name"  : "Alexa" , "Cash" : 20.00 }
+```
+
+Form type -> Delete
+Form Payload -> 
+``` json
+{ "name"  : "Alexa" }
+```
+
