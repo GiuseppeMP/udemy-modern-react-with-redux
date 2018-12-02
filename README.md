@@ -1744,7 +1744,7 @@ Well done! Lets do Code Review!
 
 *Let's build a insurance company!*
 
-Policy -> CUstomer holds a 'policy', if bad stuff happens to them then we pay them.
+Policy -> Customer holds a 'policy', if bad stuff happens to them then we pay them.
 
 Claim ->  Customer had something bad happen to them, we need to pay them.
 
@@ -1802,4 +1802,15 @@ Form Payload ->
 ``` json
 { "name"  : "Alexa" }
 ```
+
+## lecture 129. Mapping the Analogy to Redux.
+
+1. Action Creator (Customer)
+2. Action (Form 00)
+3. Dispatch (Form Receiver)
+4. Reducers (Departments)
+5. State (Compiled department data)
+
+
+Action want to do something, dispatch delivery this to a responsable action payload to a Reducer that changes the state.
 
