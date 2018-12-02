@@ -1760,3 +1760,21 @@ Terms -> These are insurance terms.
 
 **Form 3** (Accounting) -> Stores a big bag of cash, we pay people from this.
 
+
+
+## lecture 127. A Bit More Analogy
+
+
+Policies Department
+
+**List of Customers with Policies**
+
+Management Requirement 1 -> Tell me who has a policy right now!
+
+Management Requirement 2 -> Tell me the claims history right now!
+
+Management Requirement 3 -> Tell me our Accouting balance right now!
+
+To avoid management asking data everytime, we can store all information of entire co. inside in a 'All Department Data'.
+So, each department have to process the forms and update this centralized data.
+
