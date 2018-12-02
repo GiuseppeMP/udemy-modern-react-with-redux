@@ -1856,3 +1856,31 @@ const claimPolicy = (name, amountOfMoneyToCollect) => {
     };
 };
 ```
+
+
+## lecture 130. Creating Reducers.
+
+```js
+// Reducers (Departaments!)
+const claimHistory = (oldListOfClaims = [], action) =>{
+    if(action.type === 'CREATE_CLAIM'){
+        //we care about
+        return [...oldListOfClaims, action.payload]
+    }
+
+    return oldListOfClaims;
+    // we dont care
+};
+
+const accounting = (bagOfMoney = 100, action) => {
+
+    if(action.type === 'CREATE_CLAIM'){
+        //we care about
+        return bagOfMoney - action.payload.amountOfMoneyToCollect;
+    } else if (action.type === 'CREATE_POLICY'){
+        return bagOfMoney - action.payload.amount;
+    }
+    return bagOfMoney;
+};
+
+```
