@@ -1932,3 +1932,22 @@ Lets add redux to our logic.
     console.log(store.getState());
 
 ```
+
+
+## lecture 134. Important Redux Notes.
+
+Use Redux to grow your app size and keep low complexy.
+
+### Redux Cycle.
+
+1. Action Creator -> To change state of our app, we call an (**Action Creator**)
+2. Produces an **Action** 
+3. Gets fed to.. **dispatch**
+4. Forwards the action to ... **Reducers**
+5. Creates new **State** 
+6. Wait until we need to update state again.
+
+> the reducers are combine by combineReducers, if u miss someone things gonna wrong.
+>> dispatch will fire the action against all reducers combined.
+
+
