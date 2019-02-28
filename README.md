@@ -3,7 +3,7 @@
 1. Started at: 25/nov/18
 2. Bought at: 11/aug/18
 3. Finished at: -
-4. Source code: 
+4. Source code:
 
 # Ref
 
@@ -19,8 +19,7 @@
 1. Library focused on user interaction.
 2. React is a library and React-DOM is another.
 3. Based on components.
-4. Uses npm, for example:  "npm install -g create-react-app".
-
+4. Uses npm, for example: "npm install -g create-react-app".
 
 ## lectures 5, 6. Generating a react project
 
@@ -34,16 +33,15 @@
 
 > src : Folder where we put all the source code we write.
 
-> public :  Folder that stores static files, like images.
+> public : Folder that stores static files, like images.
 
 > node_modules : Folder that contains all of our project dependencies.
 
 > package.json : Records our project dependencies and configures our project.
 
-> package-lock.json :  Records the exact version of packages that we install.
+> package-lock.json : Records the exact version of packages that we install.
 
 > README.md : Instructions on how to use this project.
-
 
 ## lecture 8. Starting and Stopping a React App
 
@@ -51,19 +49,18 @@
 
 > starting the react app -> runs npm start on our project directory.
 
-
 ## lecture 9. Javascript Module Systems
 
 1. Erase all files in src.
 2. Create a index.js file.
-3. Add the follow snippet on the index.js, this sintax means:  
+3. Add the follow snippet on the index.js, this sintax means:
 
 Look inside node_modules a folder called react and import it with React alias.
 Look inside node_modules a folder called react-dom and import it with ReactDOM alias.
 
 ```javascript
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 ```
 
 > import 'alias' from 'library/foldername' > CommonJS Modules
@@ -78,21 +75,18 @@ import ReactDOM from 'react-dom';
 
 React component is a function or a class, that produces HTML to show the user .
 
-
 1. Lets create a component called App what returns a div with the txt 'hi there':
 
 ```javascript
 const App = () => {
-    return <div>Hi there!</div>;
+  return <div>Hi there!</div>;
 };
 ```
 
 2. Lets show this component on the screen, using ReactDOM.
 
 ```javascript
-ReactDOM.render(
-    <App/>, document.querySelector('#root')
-);
+ReactDOM.render(<App />, document.querySelector("#root"));
 ```
 
 3. '<App/>' is the name of the react component, and #root is the div present in public/index.html that we want to put the component.
@@ -119,43 +113,39 @@ Easier way:
 
 ```javascript
 const App = () => {
-    return <div>Hi there!</div>;
+  return <div>Hi there!</div>;
 };
 ```
+
 its converted to hard way:
 
 ```javascript
 "use strict";
 var App = function App() {
-    return React.createElement(
-        "div",
-        null,
-        "Hi there!"
-    );
+  return React.createElement("div", null, "Hi there!");
 };
 ```
+
 Example 2:
 
 Easier way:
 
-
 ```javascript
 const App = () => {
-    return 
-      
-      <div>
-        <div>Hi there!</div>
-          <ul>
-            <li> Oi </li>
-            <li> Babel </li>
-            <li> Under the </li>
-            <li> Hood </li>
-        </ul>
-      </div>;
-      
-      
+  return;
+
+  <div>
+    <div>Hi there!</div>
+    <ul>
+      <li> Oi </li>
+      <li> Babel </li>
+      <li> Under the </li>
+      <li> Hood </li>
+    </ul>
+  </div>;
 };
 ```
+
 its converted to hard way:
 
 ```javascript
@@ -166,34 +156,14 @@ var App = function App() {
   React.createElement(
     "div",
     null,
-    React.createElement(
-      "div",
-      null,
-      "Hi there!"
-    ),
+    React.createElement("div", null, "Hi there!"),
     React.createElement(
       "ul",
       null,
-      React.createElement(
-        "li",
-        null,
-        " Oi "
-      ),
-      React.createElement(
-        "li",
-        null,
-        " Babel "
-      ),
-      React.createElement(
-        "li",
-        null,
-        " Under the "
-      ),
-      React.createElement(
-        "li",
-        null,
-        " Hood "
-      )
+      React.createElement("li", null, " Oi "),
+      React.createElement("li", null, " Babel "),
+      React.createElement("li", null, " Under the "),
+      React.createElement("li", null, " Hood ")
     )
   );
 };
@@ -205,7 +175,6 @@ var App = function App() {
 2. JSX isn't HTML.
 3. We can conver HTML to JSX.
 
-
 ### Steps
 
 > Use codepen.io to write some HTML.
@@ -216,18 +185,15 @@ var App = function App() {
 
 ```html
 <div>
- 
   <label for="name" class="label">Enter name</label>
-  <input id="name" type="text"/>
+  <input id="name" type="text" />
   <button style="background-color:blue; color:white">Save</button>
-  
 </div>
 ```
 
 4. change return of App component for that html snippet.
 
 5. An error is expected, because HTML isn't JSX.
-
 
 ## lecture 14. Inline Styling with JSX.
 
@@ -238,16 +204,16 @@ Adding custom style to component have different syntax.
 HTML:
 
 ```html
-  <button style="background-color:blue; color:white">Save</button>
+<button style="background-color:blue; color:white">Save</button>
 ```
+
 JSX:
 
 ```jsx
-    <button style={{backgroundColor:'blue', color:'white'}}>Save</button>
+<button style={{ backgroundColor: "blue", color: "white" }}>Save</button>
 ```
 
-We need to convert properties name from baby-case to camelCase like:  first-name -> firstName, background-color -> backgroundColor and so on.
-
+We need to convert properties name from baby-case to camelCase like: first-name -> firstName, background-color -> backgroundColor and so on.
 
 ## lecture 15. Converting Styling to JSX Format
 
@@ -258,7 +224,6 @@ Steps.
 3. Change separator ; properties for , .
 4. Make sure the values of properties are wrapped by simple quote, '' or double quotes " " .
 5. Ex: before: style="background-color:blue; color:white" after: style={{backgroundColor:'blue', color:'white'}} .
-
 
 ## lecture 16. class vs className
 
@@ -295,10 +260,9 @@ function getBtnText(){
 <button style={{backgroundColor:'blue', color:'white'}}>{getBtnText()}</button>
 
 
-``` 
+```
 
 ## lecture 18. Values JSX Can't Show.
-
 
 Some values cant be used on JSX. We can use a lot of types on variable, like:
 
@@ -310,13 +274,15 @@ Some values cant be used on JSX. We can use a lot of types on variable, like:
 All examples above works, but exists a particularity that doesn't works, the use of an object:
 
 ```jsx
-const buttonText = {text:'Click me'};
+const buttonText = { text: "Click me" };
 
-Error:
-<button style={{backgroundColor:'blue', color:'white'}}>{buttonText}</button>
+Error: <button style={{ backgroundColor: "blue", color: "white" }}>
+  {buttonText}
+</button>;
 
-Works:
-<button style={{backgroundColor:'blue', color:'white'}}>{buttonText.text}</button>
+Works: <button style={{ backgroundColor: "blue", color: "white" }}>
+  {buttonText.text}
+</button>;
 ```
 
 ## lecture 19. Finding Forbidden Property Names.
@@ -333,10 +299,12 @@ Warning: Invalid DOM property `for`. Did you mean `htmlFor`?
 So, 'for', it is a forbidden HTML property we must fix:
 
 ```jsx
-    error:
-    <label for="name" className="label">{labbelText}</label>
-    works:
-    <label htmlFor="name" className="label">{labbelText}</label>
+error: <label for="name" className="label">
+  {labbelText}
+</label>;
+works: <label htmlFor="name" className="label">
+  {labbelText}
+</label>;
 ```
 
 ## lectures 20, 21. Exercise Introduction, Coding Exercise 1: JSX Interpolation.
@@ -366,7 +334,6 @@ Solution:
 ```
 
 # 25/nov/18 - Communicating with Props!
-
 
 ## lecture 22. Three Tenets of Components.
 
@@ -401,19 +368,21 @@ Lets create comments box.
 6. Inside folder public, find for index.html and add the css https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css;
 
 ```html
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+/>
 ```
 
 ## lecture 25. Naive Component Approach.
 
 Create comment html block code.
 
-
 ## lecture 26. Specifying images in JSX.
 
 Lets use faker js, open library that helps you to generate a lot of fake data.
 
->https://github.com/marak/Faker.js/
+> https://github.com/marak/Faker.js/
 
 We can fake a lot of things, almost everything. Lets use to fake avatars to our comments component.
 
@@ -427,13 +396,13 @@ Lets install it:
 3. import Faker on index.js
 
 ```jsx
-    import Faker from 'faker';
+import Faker from "faker";
 ```
 
-4. Usage may based on documentation where image.avatar generateds a fake avatar for us.               
+4. Usage may based on documentation where image.avatar generateds a fake avatar for us.
 
 ```jsx
-<img alt="avatar" src={Faker.image.avatar()}/>
+<img alt="avatar" src={Faker.image.avatar()} />
 ```
 
 ## lecture 27. Duplicating a Single Component.
@@ -453,7 +422,6 @@ Creating a Reusable & Configurable Component.
 5. Make the new component configurable by using React's 'props' system.
 6. We need to change the hardcoded information to props.
 
-
 ## lecture 29. Component Nesting.
 
 1. Our components does not have any bound. index.js -> App COmponent CommentDetail.js -> Comment Detail Component.
@@ -466,11 +434,11 @@ Creating a Reusable & Configurable Component.
 
 5. The library that takes the responsabilities from import/exports is called webpack.
 
-6. Inside the App JSX we use the name of the referenced component as HTML. 
+6. Inside the App JSX we use the name of the referenced component as HTML.
 
 ```jsx
 <div className="ui container comments">
-    <CommentDetail/>
+  <CommentDetail />
 </div>
 ```
 
@@ -479,22 +447,23 @@ Creating a Reusable & Configurable Component.
 Its always a good practice make Component Hierarchy Diagram.
 
 > Props in react is: A System for passing data from a parent component to a child component.
->> Goal is to customize or configure a child component.
+>
+> > Goal is to customize or configure a child component.
 
 Example:
 
->>App -> prop: Name='Alex' -> CommentDetail
+> > App -> prop: Name='Alex' -> CommentDetail
 
->>App -> prop: Name='Sam' -> CommentDetail
+> > App -> prop: Name='Sam' -> CommentDetail
 
->>App -> prop: Name='Peter' -> CommentDetail
-
+> > App -> prop: Name='Peter' -> CommentDetail
 
 ## lecture 31. Passing and Receiving Props
 
 The props system have two phases, first we need to provide information, the second we need to receive this information on child and handle with it.
 
 ### Providing
+
 Its simple, just use HTML sintax:
 
 ```jsx
@@ -502,6 +471,7 @@ Its simple, just use HTML sintax:
 <CommentDetail author="Sam" />
 <CommentDetail author="Peter" />
 ```
+
 or variables interpolation
 
 ```jsx
@@ -513,13 +483,13 @@ or variables interpolation
 In the arrow function of the component use an argument called props.
 
 ```jsx
-const CommentDetail = (props) => {
-    console.log(props);
+const CommentDetail = props => {
+  console.log(props);
 
-    <a href="/" className="author">
-        {props.author}
-    </a>
-}
+  <a href="/" className="author">
+    {props.author}
+  </a>;
+};
 ```
 
 ## lecture 32. Passing Multiples Props
@@ -529,31 +499,30 @@ We see before how to pass props. Its just need to write the property name equals
 Let's pass the other props, timeAgo and text.
 
 ```jsx
-<CommentDetail author="Alex" timeAgo="Today at 4:45PM" text="Nice blog post!" avatar={Faker.image.avatar()} />
+<CommentDetail
+  author="Alex"
+  timeAgo="Today at 4:45PM"
+  text="Nice blog post!"
+  avatar={Faker.image.avatar()}
+/>;
 
-  return (
-        <div className="comment">
+return (
+  <div className="comment">
+    <a href="/" className="avatar">
+      <img alt="avatar" src={props.avatar} />
+    </a>
 
-        <a href="/" className="avatar">
-            <img alt="avatar" src={props.avatar}/>
-        </a>
-
-        <div className="content">
-            <a href="/" className="author">
-                {props.author}
-            </a>
-            <div className="metadata">
-                <span className="date">
-                    {props.timeAgo}
-                </span>
-            </div>
-            <div className="text">
-                {props.text}
-            </div>
-        </div>
-
-        </div>
-    );
+    <div className="content">
+      <a href="/" className="author">
+        {props.author}
+      </a>
+      <div className="metadata">
+        <span className="date">{props.timeAgo}</span>
+      </div>
+      <div className="text">{props.text}</div>
+    </div>
+  </div>
+);
 ```
 
 ## lecture 33. Passing Props - Solutions
@@ -573,7 +542,6 @@ Lets create another component called ApprovalCard to keep those buttons. This ne
 3. Add export to ApprovalCard component.
 4. Add import of ApprovalCard in index.js.
 5. Use ApprovalCard component bysides CommentDetail component.
-
 
 ## lecture 36. Showing custom children.
 
@@ -600,7 +568,6 @@ This funky way allow us to reuse the approvalCard just wrapping anything, html o
 
 Just make sure we are using props.children somewhere in the parent.
 
-
 ## lecture 38. Exercise - Props and reusable.
 
 Just pass props as attrs.
@@ -618,7 +585,7 @@ Exercise solution:
             </div>
         );
     }
-    
+
     const Message = (props) => {
         return (
             <div className="ui message">
@@ -627,7 +594,7 @@ Exercise solution:
             </div>
         );
     }
-    
+
 
     // Renders the App component into a div with id 'root'
     ReactDOM.render(<App />, document.querySelector('#root'));
@@ -645,36 +612,34 @@ Extract content duplicated into another component.
 ## lecture 41. Children Exercise Solution.
 
 ```jsx
- const Segment = (props) => {
-        
-        return (
-            <div className="ui placeholder segment">
-                {props.children}
-            </div>
-        );
-    }
+const Segment = props => {
+  return <div className="ui placeholder segment">{props.children}</div>;
+};
 
-    const App = () => {
-        return (
-            <div>
-                
-              <Segment>
-                  <div className="ui icon header">
-                        <i className="pdf file outline icon"></i>
-                        No documents are listed for this customer.
-                    </div>
-                    <div className="ui primary button">Add Document</div>
-               </Segment>
-               
-                <Segment>
-                    <h4 class="ui header">For Your Information</h4>
-                    <p>
-                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-                    </p>
-                 </Segment>
-            </div>
-        );
-    } 
+const App = () => {
+  return (
+    <div>
+      <Segment>
+        <div className="ui icon header">
+          <i className="pdf file outline icon" />
+          No documents are listed for this customer.
+        </div>
+        <div className="ui primary button">Add Document</div>
+      </Segment>
+
+      <Segment>
+        <h4 class="ui header">For Your Information</h4>
+        <p>
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.
+        </p>
+      </Segment>
+    </div>
+  );
+};
 ```
 
 # 25/nov/18 - Structuring Apps with Class-Based Components
@@ -697,10 +662,9 @@ Until now we are just using function components, on this lecture we going to sta
 
 1. Easier code organization.
 2. Can use 'state' (another react feature).
-    1. Easier to handle user input.
+   1. Easier to handle user input.
 3. Understands lifecycle events.
-    1. Easir to do things when the app first starts.
-
+   1. Easir to do things when the app first starts.
 
 ## lecture 43. Application Overview.
 
@@ -708,24 +672,23 @@ Lets build seasons application, that detected user location and timezone afterwa
 
 1. Burr, its chilly, if the user attempts:
 
-* in the northen hemisphere.
-    * and between October and March.
-* in the southern hemisphere.
-    * and between March and October.
+- in the northen hemisphere.
+  - and between October and March.
+- in the southern hemisphere.
+  - and between March and October.
 
 2. Let's hit the beach, if the user attempts:
 
-* in the northen hemisphere.
-    * and between March and October.
-* in the southern hemisphere.
-    * and between October and March.
+- in the northen hemisphere.
+  - and between March and October.
+- in the southern hemisphere.
+  - and between October and March.
 
 ### App Challenges.
 
 1. Get user physical location.
 2. Determine the current month.
 3. Change text and styling based on location + month.
-
 
 ## lecture 44. Scaffolding the App.
 
@@ -740,18 +703,15 @@ Lets build seasons application, that detected user location and timezone afterwa
 9. In index.js import SeasonDisplay.
 10. Use SeasonDisplay in App component.
 
-
-
 ## lecture 45. Getting a Users Physical Location.
 
 We can use mozilla api:
 
->https://developer.mozilla.org/pt-BR/docs/Web/API/Geolocation/getCurrentPosition
+> https://developer.mozilla.org/pt-BR/docs/Web/API/Geolocation/getCurrentPosition
 
 1. In app component use the mozilla api.
 
 > window.navigator.geolocation.getCurrentPosition();
-
 
 ## lecture 46. Resetting Geolocation Preferences.
 
@@ -775,30 +735,24 @@ To refactor a functional comp to class comp, we need to attemp some requirements
 2. Must extend subclass React.Component.
 3. Must define a 'render' method that returns some amount of JSX.
 
-for example: 
+for example:
 
 ```jsx
 class App extends React.Component {
+  render() {
+    window.navigator.geolocation.getCurrentPosition(
+      position => console.log(position),
+      error => console.log(error)
+    );
 
-    render(){
-
-        window.navigator.geolocation.getCurrentPosition(
-
-            (position) => console.log(position),
-            (error) => console.log(error)
-    
-        );
-
-        return (
-            <div>        
-                <div>Latitude:</div>  
-                <div>Longitude:</div>  
-                <SeasonDisplay/>
-            </div>
-
-        );
-    }
-
+    return (
+      <div>
+        <div>Latitude:</div>
+        <div>Longitude:</div>
+        <SeasonDisplay />
+      </div>
+    );
+  }
 }
 ```
 
@@ -815,20 +769,19 @@ class App extends React.Component {
 
 > Technically can be used with funcional components using the 'hooks' system.
 
-
 ## lecture 50. Initializing State Through Constructors.
 
 > React says we have to define render method!!
 
 > We need to specificy constructor function in class component.
->> In the constructor is a good place to initialize the state.
-
-
+>
+> > In the constructor is a good place to initialize the state.
 
 ## lecture 51. Updating State Properties.
 
 > Updating state object on a component causes a instantly rerender.
->>Never assign directly on state.
+>
+> > Never assign directly on state.
 
 ```jsx
 constructor(props) {
@@ -844,7 +797,7 @@ constructor(props) {
 				this.setState({
 					lat: position.coords.latitude
                 });
-                
+
                 // we dit not!! this is bad!!
                 // this.state.lat = position.coords.latitude;
 			},
@@ -863,17 +816,13 @@ How to handling errors, in almost all new react players forget to handle errors.
 
 Just save the error message in state. :)
 
-
-
 ## lecture 54. Conditionally Rendering Content.
 
 1. Render latitude if successed.
 2. Render error if something gonna wrong.
 3. Render loading if geolocation do not answer yet.
 
-
 # 26/nov/18 Section 6 - Understanding Lifecycle Methods.
-
 
 ## lecture 55. Introducing Lifecycle Methods.
 
@@ -906,7 +855,6 @@ Component Lifecycle over time:
 1. shouldComponentUpdate.
 2. getDerivedStateFromProps.
 3. getSnapshotBeforeUpdate.
-
 
 ## lecture 57. Refactoring Data Loading to Lifecycle Methods.
 
@@ -949,12 +897,12 @@ class App extends React.Component {
 		errorMessage: ""
 	};
 ```
+
 We can see that thank the babeljs we can use this way to create our construtor.
 
 ## lecture 59. Passing State as Props.
 
 How to send state values as props to another components.
-
 
 ## lecture 60. Determining Season.
 
@@ -977,14 +925,12 @@ If is winter we need to display 'Chuur'!
 
 If is summer we need to display 'Lets hit the beach!';
 
-
-
 ## lecture 62. Showing Icons.
 
 > semantic-ui.com, find icons.
 
 ```jsx
-    <i className={`${this.state.seasonIcon} icon`} />
+<i className={`${this.state.seasonIcon} icon`} />
 ```
 
 ## lecture 63. Extracting OPtions to Config Objects.
@@ -993,19 +939,20 @@ Lets refactor this things to eliminated that duplicated ternaries. Using a patte
 
 ```jsx
 // Pattern to avoid ternaries
-	seasonConfig = {
-		summer: {
-			name: "summer",
-			text: "Let's hit the Beach!",
-			iconName: "sun"
-		},
-		winter: {
-			name: "winter",
-			text: "Burr, its chilly",
-			iconName: "snowflake"
-		}
-	};
+seasonConfig = {
+  summer: {
+    name: "summer",
+    text: "Let's hit the Beach!",
+    iconName: "sun"
+  },
+  winter: {
+    name: "winter",
+    text: "Burr, its chilly",
+    iconName: "snowflake"
+  }
+};
 ```
+
 ## lecture 64. Adding Some Styling.
 
 > semantic-ui.com, find icons and find some css.
@@ -1013,8 +960,9 @@ Lets refactor this things to eliminated that duplicated ternaries. Using a patte
 We can create a .css with the name of js, to refer the styling of my component. React does not scan your src folder to load css files, this need to made manualy with import;
 
 ```jsx
-import 'SeasonDisplay.css'
+import "SeasonDisplay.css";
 ```
+
 This works because webpack takes care about the css file.
 
 ## lecture 65. Showing a Loading Spinner.
@@ -1022,7 +970,6 @@ This works because webpack takes care about the css file.
 Lets think about user experience. Go for a loading component.
 
 > Look for a loading in semantic-ui.com and create loader component.
-
 
 ## lecture 66. Specifying Default Props.
 
@@ -1033,10 +980,10 @@ To create default values just use like this (two ways):
 1. Or expression: {props.message || 'Loading...'}
 2. Or using the fancy way defaultProps;
 
-```jsx 
-    Component.defaultProps ={
-        message : 'Loading...'
-    }
+```jsx
+Component.defaultProps = {
+  message: "Loading..."
+};
 ```
 
 ### Example:
@@ -1045,15 +992,15 @@ To create default values just use like this (two ways):
 import React from "react";
 
 const Spinner = props => {
-	return (
-		<div className="ui active dimmer indeterminate">
-			<div className="ui big text loader">{props.message}</div>
-		</div>
-	);
+  return (
+    <div className="ui active dimmer indeterminate">
+      <div className="ui big text loader">{props.message}</div>
+    </div>
+  );
 };
 
 Spinner.defaultProps = {
-	message: "Loading..."
+  message: "Loading..."
 };
 
 export default Spinner;
@@ -1097,77 +1044,65 @@ Use a helper function to render some JSX conditionaly.
 
 Just do a review of all code wrote until now.
 
->https://github.com/GiuseppeMP/udemy-modern-react-with-redux
-
+> https://github.com/GiuseppeMP/udemy-modern-react-with-redux
 
 ## lecture 69. Exercise class-based-component.
 
 Solution:
 
 ```jsx
- class UserForm extends React.Component {
-    render(){
-        return (
-        <form>
-            <label>Enter a username:</label>
-            <input />
-        </form>
-        );
-    };
-
+class UserForm extends React.Component {
+  render() {
+    return (
+      <form>
+        <label>Enter a username:</label>
+        <input />
+      </form>
+    );
+  }
 }
 ```
 
 ## lecture 70. Updating Components with State.
 
-
 Solution:
 
 ```jsx
 class Clock extends React.Component {
-    state = {
-        time : null
-    };
+  state = {
+    time: null
+  };
 
-    componentDidMount() {
-        setInterval(() => {
-            this.setState({
-                time : new Date().toLocaleTimeString()    
-            });
-            
-        }, 1000)
-    }
-    
-    render() {
-        return (
-            <div className="time">
-                The time is: {this.state.time}
-            </div>
-        );
-    }
+  componentDidMount() {
+    setInterval(() => {
+      this.setState({
+        time: new Date().toLocaleTimeString()
+      });
+    }, 1000);
+  }
+
+  render() {
+    return <div className="time">The time is: {this.state.time}</div>;
+  }
 }
 ```
 
-
 # 26/nov/18 Section 7 - Handling User Input with Forms and Events.
-
 
 ## lecture 71. App Overview.
 
-
 Search for images from text input text.
 
-> Tech Challenges 
+> Tech Challenges
 
 1. How do we get feedback from the user
 2. How do we fetch data from some outside API or server?
 3. How do we show lists of records?
 
-* Create a project pics.
-* Use create-react-app pics.
+- Create a project pics.
+- Use create-react-app pics.
 
 ## lecture 72. Component Design.
-
 
 > App Challegends
 
@@ -1175,12 +1110,11 @@ Search for images from text input text.
 
 2. Need to use that search term to make a request to an outside API and fetch data.
 
-3. Need to take the fetched images and show them on the screen in a list. 
+3. Need to take the fetched images and show them on the screen in a list.
 
 4. Lets create two components, SearchBar and ImageList.
 
 4.1. App -> SearchBar, App -> ImageList.
-
 
 ## lecture 73. Adding Some Project Structure.
 
@@ -1192,15 +1126,11 @@ Search for images from text input text.
 
 4. Write the App.js as a functional component and import on index.js.
 
-
 ## lecture 74. Showing Form to the User.
-
 
 1. Lets create a SearchBar.js in components.
 
 2. Add a input text and import on App.js
-
-
 
 ## lecture 75. Adding a Touch of style.
 
@@ -1213,9 +1143,11 @@ Search for images from text input text.
 3. Inside folder public, find for index.html and add the css https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css;
 
 ```html
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+/>
 ```
-
 
 ## lecture 76. Creating Events Handlers.
 
@@ -1225,20 +1157,21 @@ Lets handle some user input.
 
 ### List of events JSX:
 
-* onClick -> User click on element.
-* onChange -> User change the element value.
-* onSubmit -> User submit the form.
+- onClick -> User click on element.
+- onChange -> User change the element value.
+- onSubmit -> User submit the form.
 
 ## lecture 77. Alternate Event Handler Syntax.
 
 > There is a alternative to use onChange event.
 
 ```jsx
-    {e =>
-        this.setState({
-            searchTerm: e.target.value
-        })
-    }
+{
+  e =>
+    this.setState({
+      searchTerm: e.target.value
+    });
+}
 ```
 
 ## lecture 78. Uncontrolled vs Controlled Elements.
@@ -1283,7 +1216,6 @@ Controlled can change the values by logical functions like filters and capitaliz
 
 Uncontrolled cant change the inputed value by the user.
 
-
 ## lecture 80. Handling Form Submittal.
 
 Lets make the Enter submit the form but we dont want to refresh all page.
@@ -1304,40 +1236,42 @@ Lets make the Enter submit the form but we dont want to refresh all page.
 Why on onFormSubmit this.state.term is undefined.
 
 Instance of SearchBar
-    state
-    render
-    onFormSubmit
-    this -> giver access of SearchBar.
+state
+render
+onFormSubmit
+this -> giver access of SearchBar.
 
     > What is 'this' used for in a class?
     > How is the value of 'this' determined in a function.
-
 
 ## lecture 82. Solving Context Issues.
 
 We can resolve this using many different ways:
 
 1. constructor bind:
+
 ```jsx
-    this.drive = this.drive.bind(this);
+this.drive = this.drive.bind(this);
 ```
+
 2. Using arrow function. Arrow function always bind 'this' automaticly. [BEST]
+
 ```jsx
- onFormSubmit =(e) => {
-    e.preventDefault();
-    console.log(this.state.term);
-  }
+onFormSubmit = e => {
+  e.preventDefault();
+  console.log(this.state.term);
+};
 ```
 
 3. We can pass directly an arrow function on onSubmit attribute:
 
- ```jsx
- <form className="ui form" onSubmit={ (e) =>this.onFormSubmit()}>
+```jsx
+<form className="ui form" onSubmit={ (e) =>this.onFormSubmit()}>
 
 onFormSubmit(e) {
-    e.preventDefault();
-    console.log(this.state.term);
-  }
+   e.preventDefault();
+   console.log(this.state.term);
+ }
 ```
 
 ## lecture 83. Communicating Chiled To Parent
@@ -1366,10 +1300,7 @@ onSearchSubmit(term) {
 
 3. Refer on SearchBar the name onSubmit.
 
-
-
 # 27/nov/18 Section 8 - Making API Requests with React.
-
 
 ## lecture 85. Fetching Data.
 
@@ -1383,25 +1314,24 @@ onSearchSubmit(term) {
 8. Copy the Access Key.
 9. /search/photos.
 
-
 ## lecture 86. Axios vs Fetch.
 
 Lets understand the search flow.
 
-[React App] -> [Ajax Client] -> Send me data about pics for cars -> [Unsplash API]
-[React App]                  <=========+++++++++++ response         [Unsplash API]
+[React App] -> [Ajax Client] -> Send me data about pics for cars -> [Unsplash API][react app] <=========+++++++++++ response [Unsplash API]
 
 > Exists two libraries to do so, AXIOS and FETCH.
->> Axios: 3rd party package. [BEST]
->> Fetch: function build into modern browsers. [MEH - a lot of code]
+>
+> > Axios: 3rd party package. [BEST]
+> > Fetch: function build into modern browsers. [MEH - a lot of code]
 
 Lets install axios, run:
 
 ```nodejs
     npm install --save axios
 ```
-For convention, all imports of natives and 3rd parties may stay above of components imports.
 
+For convention, all imports of natives and 3rd parties may stay above of components imports.
 
 ## lecture 87. Viewing Request Results.
 
@@ -1414,13 +1344,12 @@ Lets use axios to call unsplash API.
 3. Voala The API is available at https://api.unsplash.com/. Responses are sent as JSON.
 
 4. Also, look for how to authorization: https://unsplash.com/documentation#authorization.
-    4.1. Wen can include a header with accessKey.
-    4.2. Or we can include accessKey as get param.
+   4.1. Wen can include a header with accessKey.
+   4.2. Or we can include accessKey as get param.
 
 5. We need to add query param as well.
 
 6. All done.
-
 
 ## lecture 88. Handling Requests with Async Await.
 
@@ -1429,21 +1358,20 @@ we can use async keyword to handle promises.
 We can use async keywords, just use 'async' in front of the method, and use 'wait' keyword to assign the async result to a const.
 
 ```jsx
- onSearchSubmit = async term => {
-    console.log(term);
-    const response = await axios.get("https://api.unsplash.com/search/photos", {
-      params: {
-        query: term
-      },
-      headers: {
-        Authorization:
-          "Client-ID 600c50175b92741f2e95dd8c0714508aa114e5f3454c3e5e189b33403af6777d"
-      }
-    });
-    console.log(response.data.results);
-  };
+onSearchSubmit = async term => {
+  console.log(term);
+  const response = await axios.get("https://api.unsplash.com/search/photos", {
+    params: {
+      query: term
+    },
+    headers: {
+      Authorization:
+        "Client-ID 600c50175b92741f2e95dd8c0714508aa114e5f3454c3e5e189b33403af6777d"
+    }
+  });
+  console.log(response.data.results);
+};
 ```
-
 
 ## lecture 89. Setting State After Async Requests.
 
@@ -1461,7 +1389,6 @@ Lets clean up our code in next section!
 
 3. insted of import axios, lets import direcly unsplash.js.
 
-
 # 28/nov/18 Section 9 - Building List of Records.
 
 ## lecture 92. Rendering Lists.
@@ -1477,10 +1404,9 @@ Lets clean up our code in next section!
 How to iterate a array on js:
 
 ```jsx
-const numbers = [0,1,2,3,4,5,6]
+const numbers = [0, 1, 2, 3, 4, 5, 6];
 
-numbers.map(num => <div>{num}</div>)
-
+numbers.map(num => <div>{num}</div>);
 ```
 
 ## lecture 94. Rendering List of Components.
@@ -1503,7 +1429,7 @@ export default ImageList;
 ```
 
 ## lecture 95. The Purpose of Keys in Lists.
- 
+
 ```js
 Warning: Each child in an array or iterator should have a unique "key" prop.
 
@@ -1514,7 +1440,7 @@ Check the render method of `ImageList`. See https://fb.me/react-warning-keys for
     in App (at src/index.js:5
 ```
 
- * List of 'To Do' Items.
+- List of 'To Do' Items.
 
 { id: 1, task: 'Take ou trash'}
 { id: 2, task: 'Wash the car'}
@@ -1523,21 +1449,19 @@ Check the render method of `ImageList`. See https://fb.me/react-warning-keys for
 
 To help react to render just the new itens, use key prop. This approach avoid to rerender a lot of things wich already rendered.
 
-
 ## lecture 96. Implementing Keys in Lists.
 
 Lets fix the Key error! We need a find a good property to be the key property value.
 
 ```jsx
 const images = props.images.map(({ description, id, urls }) => {
-    return <img key={id} src={urls.small} alt={description} />;
-  });
+  return <img key={id} src={urls.small} alt={description} />;
+});
 ```
+
 **WHAT FUNKY!**
 
-
 # 28/nov/18 Section 10 - Using Ref's for DOM Access.
-
 
 ## lecture 97. Grid CSS.
 
@@ -1549,17 +1473,16 @@ Lets fix the grid css problems.
 
 ```css
 .image-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 10px;
-    grid-auto-rows: 200px;
-    
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 10px;
+  grid-auto-rows: 200px;
 }
 
 .image-list img {
-    width: 250px;
-    height: auto;
-    grid-row-end: span 2;
+  width: 250px;
+  height: auto;
+  grid-row-end: span 2;
 }
 ```
 
@@ -1571,10 +1494,9 @@ The height of images changes everytime and with only css we cant fit the screen.
 
 2. Create as class-based component.
 
-
 ## lecture 100. Accessing the DOM with Refs.
 
-***Lets use the component created in lecture 99 to somehow calculate the images height;***
+**_Lets use the component created in lecture 99 to somehow calculate the images height;_**
 
 1. Let the ImageCard render itself and its image.
 
@@ -1584,21 +1506,17 @@ The height of images changes everytime and with only css we cant fit the screen.
 
 4. When rerendering, assign a 'grid-row-end' to make sure the image takes up the appropriate space.
 
+- Using document.querySelector('img').clientHeight, in react we dont access directly the DOM, for this we use a feature called **React Refs**.
 
-* Using document.querySelector('img').clientHeight, in react we dont access directly the DOM, for this we use a feature called **React Refs**.
+- A React Refs gives acces to a single DOM Element.
 
-* A React Refs gives acces to a single DOM Element.
-
-* We create refs in the constructor, assign them to instance variable, then pass to a particular JSX element as props.
-
+- We create refs in the constructor, assign them to instance variable, then pass to a particular JSX element as props.
 
 ## lecture 101. Accesing Image Height.
 
 We can use refs in constructor to access the DOM generated by the component.
 
 ```jsx
-
-
 class ImageCard extends Component {
   constructor(props) {
     super(props);
@@ -1620,14 +1538,11 @@ class ImageCard extends Component {
     );
   }
 }
-
 ```
 
 But this approach are taking clientHeight as 0, because componentDidMount execute to early, before the DOM loads the image and discovery the height, lets figure out how to fix this in next lecture.
 
-
 ## lecture 102. Callbacks on Image Load.
-
 
 To get the image height after load we need a callback on imageload.
 
@@ -1645,10 +1560,10 @@ To get the image height after load we need a callback on imageload.
   };
 ```
 
-
 ## lecture 103. Dynamic Spans.
 
 ** Solution**
+
 ```jsx
   componentDidMount() {
     console.log(this.imageRef.current.clientHeight);
@@ -1664,23 +1579,21 @@ To get the image height after load we need a callback on imageload.
       spans: spans
     });
   };
-``` 
+```
 
 ```css
 .image-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 0 10px;
-    grid-auto-rows: 10px;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 0 10px;
+  grid-auto-rows: 10px;
 }
 
 .image-list img {
-    width: 250px;
-    grid-row-end: span 2;
+  width: 250px;
+  grid-row-end: span 2;
 }
 ```
-
 
 ## lecture 104. App Review.
 
@@ -1698,11 +1611,7 @@ Well done! Lets do Code Review!
 
 5. Introduction to React Ref system.
 
-
-
-
 # 28/nov/18 Section 12 - On We Go... To Redux!
-
 
 ## lecture 125. Introduction to Redux.
 
@@ -1716,19 +1625,17 @@ Well done! Lets do Code Review!
 
 4. Not explicitly designed to work with React.
 
-
 ## lecture 126. Redux by Analogy.
 
 > Lets do some funky stuff
 
-* Story to help you undestand Redux.
+- Story to help you undestand Redux.
 
-* Write  some code in Codepen with Redux only.
+- Write some code in Codepen with Redux only.
 
-* Work on a React App.
+- Work on a React App.
 
-* Understand how to integrate React with Redux.
-
+- Understand how to integrate React with Redux.
 
 ### Redux Cycle
 
@@ -1742,28 +1649,25 @@ Well done! Lets do Code Review!
 
 5. State
 
-*Let's build a insurance company!*
+_Let's build a insurance company!_
 
 Policy -> Customer holds a 'policy', if bad stuff happens to them then we pay them.
 
-Claim ->  Customer had something bad happen to them, we need to pay them.
+Claim -> Customer had something bad happen to them, we need to pay them.
 
 Terms -> These are insurance terms.
 
 ### Solution Insurance Co
 
-*Customer* -> **Form 0** -> *Form Receiver*
+_Customer_ -> **Form 0** -> _Form Receiver_
 
-**Form 1**  (Claims History) -> Stores a list of all claims ever made.
+**Form 1** (Claims History) -> Stores a list of all claims ever made.
 
 **Form 2** (Policies) -> Stores a list of who has a policy with our insurance company.
 
 **Form 3** (Accounting) -> Stores a big bag of cash, we pay people from this.
 
-
-
 ## lecture 127. A Bit More Analogy
-
 
 Policies Department
 
@@ -1778,29 +1682,29 @@ Management Requirement 3 -> Tell me our Accouting balance right now!
 To avoid management asking data everytime, we can store all information of entire co. inside in a 'All Department Data'.
 So, each department have to process the forms and update this centralized data.
 
-
-
 ## lecture 128. Finishing the Analogy.
-
 
 Video especification of the departments.
 
 Form type -> Claim
-Form Payload -> 
-``` json
-{ "name"  : "Alexa" , "Claim Amount" : 500.00 }
+Form Payload ->
+
+```json
+{ "name": "Alexa", "Claim Amount": 500.0 }
 ```
 
 Form type -> Create
-Form Payload -> 
-``` json
-{ "name"  : "Alexa" , "Cash" : 20.00 }
+Form Payload ->
+
+```json
+{ "name": "Alexa", "Cash": 20.0 }
 ```
 
 Form type -> Delete
-Form Payload -> 
-``` json
-{ "name"  : "Alexa" }
+Form Payload ->
+
+```json
+{ "name": "Alexa" }
 ```
 
 ## lecture 129. Mapping the Analogy to Redux.
@@ -1811,15 +1715,11 @@ Form Payload ->
 4. Reducers (Departments)
 5. State (Compiled department data)
 
-
 Action want to do something, dispatch delivery this to a responsable action payload to a Reducer that changes the state.
-
-
 
 ## lecture 130. Moddeling with Redux.
 
-
->  Go to codepen.io.
+> Go to codepen.io.
 
 1. Add redux, react, react-dom to our dependencies.
 2. Change view to editor layour.
@@ -1827,62 +1727,58 @@ Action want to do something, dispatch delivery this to a responsable action payl
 
 ```js
 const createPolicy = (name, amount) => {
-    return {
-
-        type: 'CREATE_POLICY',
-        payload: {
-            name , amount
-        }
-    };
+  return {
+    type: "CREATE_POLICY",
+    payload: {
+      name,
+      amount
+    }
+  };
 };
 
-const deletePolicy = (name) => {
-    return {
-
-        type: 'DELETE_POLICY',
-        payload: {
-            name
-        }
-    };
+const deletePolicy = name => {
+  return {
+    type: "DELETE_POLICY",
+    payload: {
+      name
+    }
+  };
 };
 
 const claimPolicy = (name, amountOfMoneyToCollect) => {
-    return {
-
-        type: 'CLAIM_POLICY',
-        payload: {
-            name, amountOfMoneyToCollect
-        }
-    };
+  return {
+    type: "CLAIM_POLICY",
+    payload: {
+      name,
+      amountOfMoneyToCollect
+    }
+  };
 };
 ```
-
 
 ## lecture 131. Creating Reducers.
 
 ```js
 // Reducers (Departaments!)
-const claimHistory = (oldListOfClaims = [], action) =>{
-    if(action.type === 'CREATE_CLAIM'){
-        //we care about
-        return [...oldListOfClaims, action.payload]
-    }
+const claimHistory = (oldListOfClaims = [], action) => {
+  if (action.type === "CREATE_CLAIM") {
+    //we care about
+    return [...oldListOfClaims, action.payload];
+  }
 
-    return oldListOfClaims;
-    // we dont care
+  return oldListOfClaims;
+  // we dont care
 };
 
 const accounting = (bagOfMoney = 100, action) => {
-
-    if(action.type === 'CREATE_CLAIM'){
-        //we care about
-        return bagOfMoney - action.payload.amountOfMoneyToCollect;
-    } else if (action.type === 'CREATE_POLICY'){
-        return bagOfMoney - action.payload.amount;
-    }
-    return bagOfMoney;
+  if (action.type === "CREATE_CLAIM") {
+    //we care about
+    return bagOfMoney - action.payload.amountOfMoneyToCollect;
+  } else if (action.type === "CREATE_POLICY") {
+    return bagOfMoney - action.payload.amount;
+  }
+  return bagOfMoney;
 };
-
 ```
 
 ## lecture 132. Rules of Reducers.
@@ -1890,17 +1786,14 @@ const accounting = (bagOfMoney = 100, action) => {
 Never modified the value passing by parameters.
 
 ```jsx
-const policies = (listOfPolicies = [], action) =>{
-
-    if(action.type === 'CREATE_POLICY'){
-        return [...listOfPolicies, action.payload.name];
-
-    } else if (action.type === 'DELETE_POLICY'){
-        return listOfPolicies.filter( name => name !== action.payload.name)
-    }
-    return listOfPolicies;
+const policies = (listOfPolicies = [], action) => {
+  if (action.type === "CREATE_POLICY") {
+    return [...listOfPolicies, action.payload.name];
+  } else if (action.type === "DELETE_POLICY") {
+    return listOfPolicies.filter(name => name !== action.payload.name);
+  }
+  return listOfPolicies;
 };
-
 ```
 
 ## lecture 133. Testing Our Example.
@@ -1908,31 +1801,28 @@ const policies = (listOfPolicies = [], action) =>{
 Lets add redux to our logic.
 
 ```js
+const { createStore, combineReducers } = Redux;
 
-    const { createStore, combineReducers } = Redux;
+const ourDepartments = combineReducers({
+  accounting: accounting,
+  claimHistory: claimHistory,
+  policies: policies
+});
 
-    const ourDepartments = combineReducers({
-        accounting: accounting,
-        claimHistory: claimHistory,
-        policies: policies
-    })
+const store = createStore(ourDepartments);
 
-    const store = createStore(ourDepartments);
+store.dispatch(createPolicy("Alex", 20));
+store.dispatch(createPolicy("Joseph", 30));
+store.dispatch(createPolicy("Aline", 120));
+store.dispatch(createPolicy("Bob", 220));
+store.dispatch(createPolicy("Isac", 320));
 
-    store.dispatch(createPolicy('Alex', 20));
-    store.dispatch(createPolicy('Joseph', 30));
-    store.dispatch(createPolicy('Aline', 120));
-    store.dispatch(createPolicy('Bob', 220));
-    store.dispatch(createPolicy('Isac', 320));
+store.dispatch(createClaim("Isac", 320));
+store.dispatch(createClaim("Bob", 100));
 
-    store.dispatch(createClaim('Isac', 320));
-    store.dispatch(createClaim('Bob', 100));
-
-    store.dispatch(deletePolicy('Bob'));
-    console.log(store.getState());
-
+store.dispatch(deletePolicy("Bob"));
+console.log(store.getState());
 ```
-
 
 ## lecture 134. Important Redux Notes.
 
@@ -1941,13 +1831,22 @@ Use Redux to grow your app size and keep low complexy.
 ### Redux Cycle.
 
 1. Action Creator -> To change state of our app, we call an (**Action Creator**)
-2. Produces an **Action** 
+2. Produces an **Action**
 3. Gets fed to.. **dispatch**
 4. Forwards the action to ... **Reducers**
-5. Creates new **State** 
+5. Creates new **State**
 6. Wait until we need to update state again.
 
 > the reducers are combine by combineReducers, if u miss someone things gonna wrong.
->> dispatch will fire the action against all reducers combined.
+>
+> > dispatch will fire the action against all reducers combined.
 
+## lecture 138. React, Redux, and React-Redux!?
 
+Creating a songs app, add react-redux library.
+
+```sh
+    yarn add react-redux
+    #or
+    npm install react-redux --save
+```
