@@ -1850,3 +1850,18 @@ Creating a songs app, add react-redux library.
     #or
     npm install react-redux --save
 ```
+
+## lecture 139. Design of Redux App
+
+### Redux design on our app
+
+Song List and Song detail.
+
+> Reducers
+
+- Song list reducer ( list all songs)
+- Selected song reducer ( get selected a particular song)
+
+> Action Creators
+
+- Select Song (action to select song)
